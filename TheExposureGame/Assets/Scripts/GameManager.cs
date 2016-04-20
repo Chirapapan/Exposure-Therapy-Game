@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using UnityEngine.Events;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -28,6 +29,11 @@ public class GameManager : MonoBehaviour {
 
 	public void OpenGlobeScene()
 	{
-		Application.LoadLevel ("Globe");
+		SceneManager.LoadScene("Globe");
 	}
+
+    public void OpenStart()
+    {
+        SceneManager.LoadScene("TheExposure");
+    }
 }

@@ -6,26 +6,45 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
-	string exercise1;
+    public SavePlayerInput saveInput;
 
-	void Start()
-	{
-//		var fearState1 = GameObject.Find("FearState1").GetComponent<InputField>();
-//		var getInput= new InputField.SubmitEvent();
-//		getInput.AddListener(SubmitState);
-//		fearState1.onEndEdit = getInput;
-	}
+    public PanelManager panelManagerScript;
+    public Panel continentPanelObj;
+    public Image mapSprite;
+    public Image rewardSprite;
+    public Text continentText;
 
-	private void SubmitState(string arg0)
-	{
-		exercise1 = arg0;
-	}
+    void Awake()
+    {
 
-	public void SaveInput()
-	{
-		Debug.Log (exercise1);
+    }
 
-	}
+    public void GetContinentMap(string name, Sprite continent, Sprite reward)
+    {
+        mapSprite.sprite = continent;
+        rewardSprite.sprite = reward;
+        continentText.text = name;
+    }
+
+    public void ActivateMap()
+    {
+        panelManagerScript.Option(continentPanelObj);
+    }
+
+    public void SaveInput()
+    {
+        saveInput.fear01 = saveInput.input01.text;
+        saveInput.fear02 = saveInput.input02.text;
+        saveInput.fear03 = saveInput.input03.text;
+        saveInput.fear04 = saveInput.input05.text;
+        saveInput.fear05 = saveInput.input05.text;
+        saveInput.fear06 = saveInput.input06.text;
+        saveInput.fear07 = saveInput.input07.text;
+        saveInput.fear08 = saveInput.input08.text;
+        saveInput.fear09 = saveInput.input09.text;
+        saveInput.fear10 = saveInput.input10.text;
+
+    }
 
 	public void OpenGlobeScene()
 	{

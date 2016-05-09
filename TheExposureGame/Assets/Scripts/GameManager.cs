@@ -13,11 +13,16 @@ public class GameManager : MonoBehaviour {
     public Image mapSprite;
     public Image rewardSprite;
     public Text continentText;
+    public GameObject taskPopUp;
+    public Text numberOfExcercise;
+
+    public int ExerciseCount = 4;
 
     void Awake()
     {
 
     }
+
 
     public void GetContinentMap(string name, Sprite continent, Sprite reward)
     {
@@ -43,6 +48,12 @@ public class GameManager : MonoBehaviour {
         saveInput.fear08 = saveInput.input08.text;
         saveInput.fear09 = saveInput.input09.text;
         saveInput.fear10 = saveInput.input10.text;
+
+    }
+
+    public void Close()
+    {
+        taskPopUp.SetActive(false);
 
     }
 

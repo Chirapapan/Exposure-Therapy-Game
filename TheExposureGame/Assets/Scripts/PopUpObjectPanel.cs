@@ -30,19 +30,4 @@ public class PopUpObjectPanel : MonoBehaviour {
         }
     }
 
-    //void Update()
-    //{
-    //    if (popUp_objectivePrefab.transform.position.x < -0.5)
-    //        popUp_objectivePrefab.transform.position = new Vector3(-0.5f, popUp_objectivePrefab.transform.position.y, popUp_objectivePrefab.transform.position.z);
-
-    //    if (popUp_objectivePrefab.transform.position.x > 0.5)
-    //        popUp_objectivePrefab.transform.position = new Vector3(0.5f, popUp_objectivePrefab.transform.position.y, popUp_objectivePrefab.transform.position.z);
-
-    //}
-
-    //void OnMouseExit()
-    // {
-    // popUp_objectivePrefab.SetActive(false);
-    // }
-
 }

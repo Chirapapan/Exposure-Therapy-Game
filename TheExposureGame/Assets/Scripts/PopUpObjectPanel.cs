@@ -5,32 +5,36 @@ using System.Collections;
 public class PopUpObjectPanel : MonoBehaviour {
 
     public SavePlayerInput saveInput;
-    public GameObject popUp_objectivePrefab;
+    public Panel popUp_objectivePrefab;
     GameManager gameManager;
     //Text objectiveText;
-    Continent continentScript;
-    public float offset;
+    public float offset = 0.33f;
+    public Panel cityPanel;
+    private PopUpPanel popUpPanelScript;
+    public PanelManager panelManagerScript;
 
     void Start()
     {
-        popUp_objectivePrefab.SetActive(false);
+        panelManagerScript.CloseOption(popUp_objectivePrefab);
         //objectiveText = popUp_objectivePrefab.GetComponent<Text>();
-        continentScript = GetComponent<Continent>();
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        popUpPanelScript = popUp_objectivePrefab.GetComponent<PopUpPanel>();
     }
 
     void OnMouseOver()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (PopUpPanel.MAP_OPEN == false)
         {
-            if (popUp_objectivePrefab.activeInHierarchy == false)
+            if (Input.GetMouseButtonDown(0))
             {
-                //objectiveText.text = saveInput.fear01;
-                popUp_objectivePrefab.SetActive(true);
-                popUp_objectivePrefab.transform.position = new Vector3(Mathf.Clamp(transform.position.x, -offset, offset), transform.position.y, popUp_objectivePrefab.transform.position.z);
-                gameManager.GetContinentMap(continentScript.continentName, continentScript.continentSprite, continentScript.rewardSprite);
+                if (popUp_objectivePrefab.GetComponent<CanvasGroup>().alpha == 0)
+                {
+                    //objectiveText.text = saveInput.fear01;
+                    panelManagerScript.Option(popUp_objectivePrefab);
+                    popUp_objectivePrefab.transform.position = new Vector3(Mathf.Clamp(transform.position.x, -offset, offset), transform.position.y, popUp_objectivePrefab.transform.position.z);
+                    popUpPanelScript.SetCity(cityPanel);
+                }
             }
         }
     }
-
 }

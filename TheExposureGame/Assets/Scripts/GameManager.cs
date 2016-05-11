@@ -10,14 +10,12 @@ public class GameManager : MonoBehaviour {
     public SavePlayerInput saveInput;
 
     public PanelManager panelManagerScript;
-    public Panel continentPanelObj;
     public Image mapSprite;
     public Image rewardSprite;
     public Text continentText;
-    public GameObject taskPopUp;
-    public int ExerciseCount = 4;
+    public int exerciseCount = 4;
     public GameObject fearStates;
-    public Transform FearField;
+    public Transform fearField;
     public GameObject inputNumber;
     public GameObject inputText;
     public GameObject exercise;
@@ -38,30 +36,30 @@ public class GameManager : MonoBehaviour {
     public void IncreaseNumber()
     {
         numberOfExcercise = GameObject.Find("NumberOfExercises").GetComponent<Text>();
-        if (ExerciseCount < 10)
+        if (exerciseCount < 10)
         {
-            ExerciseCount++;
-            numberOfExcercise.text = "" + ExerciseCount;
+            exerciseCount++;
+            numberOfExcercise.text = "" + exerciseCount;
         }
     }
 
     public void DecreaseNumber()
     {
         numberOfExcercise = GameObject.Find("NumberOfExercises").GetComponent<Text>();
-        if (ExerciseCount > 4)
+        if (exerciseCount > 4)
         {
-            ExerciseCount--;
-            numberOfExcercise.text = "" + ExerciseCount;
+            exerciseCount--;
+            numberOfExcercise.text = "" + exerciseCount;
         }
     }
 
     public void InitExercises()
     {
         inputText.SetActive(true);
-        for (int i = 0; i < ExerciseCount; i++)
+        for (int i = 0; i < exerciseCount; i++)
         {
             fearState = (GameObject)Instantiate(fearStates);
-            fearState.transform.SetParent(FearField, false);
+            fearState.transform.SetParent(fearField, false);
             RectTransform rect = fearState.GetComponent<RectTransform>();
             rect.localPosition = new Vector3(x, y, 0);
             y = y - 60;
@@ -71,8 +69,18 @@ public class GameManager : MonoBehaviour {
 
             inputFields.Add(fearState);
         }
-
         inputNumber.SetActive(false);
+
+        int playerPrefNum = PlayerPrefs.GetInt("ExerciseNum");
+        if(playerPrefNum == 0)
+        {
+            playerPrefNum = exerciseCount;
+        }
+        else
+        {
+            playerPrefNum = playerPrefNum + exerciseCount;
+            PlayerPrefs.SetInt("ExerciseNum", playerPrefNum);
+        }
   
     }
 
@@ -82,17 +90,10 @@ public class GameManager : MonoBehaviour {
         inputText.SetActive(false);
     }
 
-    public void GetContinentMap(string name, Sprite continent, Sprite reward)
-    {
-        mapSprite.sprite = continent;
-        rewardSprite.sprite = reward;
-        continentText.text = name;
-    }
-
     public void InitText()
     {
         int y = -60;
-        for (int i = 0; i < ExerciseCount; i++)
+        for (int i = 0; i < exerciseCount; i++)
         {
             GameObject fear = (GameObject)Instantiate(exercise);
             fear.transform.SetParent(exerciseField.transform, false);
@@ -103,11 +104,6 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-    public void ActivateMap()
-    {
-        panelManagerScript.Option(continentPanelObj);
-    }
-
     public void SaveInput()
     {
         for(int i = 0; i < inputFields.Count; i++)
@@ -115,12 +111,6 @@ public class GameManager : MonoBehaviour {
             PlayerPrefs.SetString("Exercise" + i,  inputFields[i].GetComponent<Text>().text);
             Debug.Log(PlayerPrefs.GetString("Exercise" + i));
         }
-
-    }
-
-    public void Close()
-    {
-        taskPopUp.SetActive(false);
 
     }
 

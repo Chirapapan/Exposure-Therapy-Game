@@ -7,7 +7,12 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
 
     public SavePlayerInput saveInput;
-    
+
+    public PanelManager panelManagerScript;
+    public Panel continentPanelObj;
+    public Image mapSprite;
+    public Image rewardSprite;
+    public Text continentText;
     public GameObject taskPopUp;
     public Text numberOfExcercise;
 
@@ -16,6 +21,19 @@ public class GameManager : MonoBehaviour {
     void Awake()
     {
 
+    }
+
+
+    public void GetContinentMap(string name, Sprite continent, Sprite reward)
+    {
+        mapSprite.sprite = continent;
+        rewardSprite.sprite = reward;
+        continentText.text = name;
+    }
+
+    public void ActivateMap()
+    {
+        panelManagerScript.Option(continentPanelObj);
     }
 
     public void SaveInput()

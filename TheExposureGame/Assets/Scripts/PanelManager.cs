@@ -30,4 +30,11 @@ public class PanelManager : MonoBehaviour
         CurrentOption.IsOpen = true;
         canvasGroupCurrentOption.alpha = 1;
     }
+
+    public void CloseOption(Panel option)
+    {
+        CurrentOption = option;
+        CurrentOption.IsOpen = false;
+        canvasGroupCurrentOption.alpha = 0;
+    }
 }

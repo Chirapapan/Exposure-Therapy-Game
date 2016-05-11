@@ -478,7 +478,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.35294116, g: 0.25302798, b: 0.096020766, a: 0.019607844}
+  m_BackGroundColor: {r: 0, g: 0, b: 0.2, a: 1}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -1028,7 +1028,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 01861cb6fff245e488d1f154ab15275c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 01861cb6fff245e488d1f154ab15275c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1716,7 +1716,11 @@ MonoBehaviour:
   rewardSprite: {fileID: 1500005128}
   continentText: {fileID: 794398540}
   taskPopUp: {fileID: 1949918539}
-  numberOfExcercise: {fileID: 0}
+  ExerciseCount: 4
+  fearStates: {fileID: 0}
+  FearField: {fileID: 0}
+  inputNumber: {fileID: 0}
+  inputText: {fileID: 0}
 --- !u!4 &1449973601
 Transform:
   m_ObjectHideFlags: 0

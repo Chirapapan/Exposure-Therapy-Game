@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Continent
+  - Week
   layers:
   - Default
   - TransparentFX

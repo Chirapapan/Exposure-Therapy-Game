@@ -17,20 +17,28 @@ public class GameManager : MonoBehaviour {
     public GameObject fearStates;
     public Transform fearField;
     public GameObject inputNumber;
-    public GameObject inputText;
-    public GameObject exercise;
-    public GameObject exerciseField;
+    public GameObject inputText; 
+    public GameObject weeks;
+    public Transform content;
 
     private List<GameObject> inputFields = new List<GameObject>();
 
     private Text numberOfExcercise;
+    private int exerciseSaveBool = 0;
+    private int numberOfSave = 0;
     private GameObject fearState;
     int x = 135;
     int y = 135;
+    private GameObject week;
+    int weekX = 60;
+    int WeekY = -50;
+
+
+    private List<int> ListOfWeek = new List<int>();
 
     void Start()
     {
-       
+        numberOfSave = PlayerPrefs.GetInt("NumberOfSave");
     }
 
     public void IncreaseNumber()
@@ -84,25 +92,49 @@ public class GameManager : MonoBehaviour {
   
     }
 
-    public void InputNumberToTrue()
+    public void InitWeek()
     {
-        inputNumber.SetActive(true);
-        inputText.SetActive(false);
-    }
-
-    public void InitText()
-    {
-        int y = -60;
-        for (int i = 0; i < exerciseCount; i++)
+        int weekCount = 0;
+        GetPlayerPrefsIntoList();
+        for (int i = 0; i < ListOfWeek.Count; i++)
         {
-            GameObject fear = (GameObject)Instantiate(exercise);
-            fear.transform.SetParent(exerciseField.transform, false);
-            fear.GetComponent<RectTransform>().localPosition = new Vector3(-10, y, 0);
-            y = y - 50;
-            fear.GetComponent<Text>().text = PlayerPrefs.GetString("Exercise" + i);
-            
+            for (int j = 0; j < 4; j++)
+            {
+                week = (GameObject)Instantiate(weeks);
+                week.transform.SetParent(content, false);
+                RectTransform rect = week.GetComponent<RectTransform>();
+                rect.localPosition = new Vector3(weekX, WeekY, 0);
+                weekCount++;
+                week.GetComponentInChildren<Text>().text = "Week" + "" +  weekCount;
+                weekX = weekX + 100;
+                if(j == 3)
+                {
+                    weekX = 60;
+                    WeekY = WeekY - 100;
+                }
+            }
         }
     }
+
+    public void InputTextToTrue()
+    {
+        for (int i = 0; i < ListOfWeek.Count; i++)
+        {
+            if(numberOfSave == ListOfWeek[i] && exerciseSaveBool == 0)
+            {
+                //Debug yes 
+                inputNumber.SetActive(true);
+                inputText.SetActive(false);
+            }
+            else if(numberOfSave == ListOfWeek[i] && exerciseSaveBool == 1)
+            {
+                //Debug no 
+                inputNumber.SetActive(false);
+                inputText.SetActive(true);
+            }
+        }
+    }
+
 
     public void SaveInput()
     {
@@ -111,7 +143,9 @@ public class GameManager : MonoBehaviour {
             PlayerPrefs.SetString("Exercise" + i,  inputFields[i].GetComponent<Text>().text);
             Debug.Log(PlayerPrefs.GetString("Exercise" + i));
         }
-
+        numberOfSave++;
+        PlayerPrefs.SetInt("ExerciseSaveWeek" + numberOfSave++, exerciseSaveBool = 1);
+        PlayerPrefs.SetInt("NumberOfSave", numberOfSave);
     }
 
 	public void OpenGlobeScene()
@@ -122,5 +156,14 @@ public class GameManager : MonoBehaviour {
     public void OpenStart()
     {
         SceneManager.LoadScene("TheExposure");
+    }
+
+    private void GetPlayerPrefsIntoList()
+    {
+        ListOfWeek.Clear();
+        for (int i = 0; i < numberOfSave; i++)
+        {
+            ListOfWeek.Add(PlayerPrefs.GetInt("ExerciseSaveWeek" + i));
+        }
     }
 }

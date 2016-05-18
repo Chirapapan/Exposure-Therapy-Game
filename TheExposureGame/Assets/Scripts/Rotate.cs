@@ -5,9 +5,9 @@ public class Rotate : MonoBehaviour
 {
     Vector3 clickedPosition;
     Vector3 movedPosition;
-    public float speed = 1.0f;
+    public float speed = 0.7f;
 
-    void OnMouseOver()
+    void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {

@@ -64,6 +64,7 @@ public class GameManager : MonoBehaviour {
     public void InitExercises()
     {
         inputText.SetActive(true);
+        inputNumber.SetActive(false);
         for (int i = 0; i < exerciseCount; i++)
         {
             fearState = (GameObject)Instantiate(fearStates);
@@ -77,75 +78,72 @@ public class GameManager : MonoBehaviour {
 
             inputFields.Add(fearState);
         }
-        inputNumber.SetActive(false);
 
-        int playerPrefNum = PlayerPrefs.GetInt("ExerciseNum");
-        if(playerPrefNum == 0)
-        {
-            playerPrefNum = exerciseCount;
-        }
-        else
-        {
-            playerPrefNum = playerPrefNum + exerciseCount;
-            PlayerPrefs.SetInt("ExerciseNum", playerPrefNum);
-        }
+        //int playerPrefNum = PlayerPrefs.GetInt("ExerciseNum");
+
+        //if (playerPrefNum == 0)
+        //{
+        //    playerPrefNum = exerciseCount;
+        //}
+        //else
+        //{
+        //    playerPrefNum = playerPrefNum + exerciseCount;
+        //    PlayerPrefs.SetInt("ExerciseNum", playerPrefNum);
+        //}
+
+        PlayerPrefs.SetInt("NumberOfExercises", exerciseCount);
   
     }
 
     public void InitWeek()
     {
-        int weekCount = 0;
-        GetPlayerPrefsIntoList();
-        for (int i = 0; i < ListOfWeek.Count; i++)
-        {
-            for (int j = 0; j < 4; j++)
-            {
-                week = (GameObject)Instantiate(weeks);
-                week.transform.SetParent(content, false);
-                RectTransform rect = week.GetComponent<RectTransform>();
-                rect.localPosition = new Vector3(weekX, WeekY, 0);
-                weekCount++;
-                week.GetComponentInChildren<Text>().text = "Week" + "" +  weekCount;
-                weekX = weekX + 100;
-                if(j == 3)
-                {
-                    weekX = 60;
-                    WeekY = WeekY - 100;
-                }
-            }
-        }
+
+        //int weekCount = 0;
+        //GetPlayerPrefsIntoList();
+        //for (int i = 0; i < ListOfWeek.Count; i++)
+        //{
+        //    for (int j = 0; j < 4; j++)
+        //    {
+        //        week = (GameObject)Instantiate(weeks);
+        //        week.transform.SetParent(content, false);
+        //        RectTransform rect = week.GetComponent<RectTransform>();
+        //        rect.localPosition = new Vector3(weekX, WeekY, 0);
+        //        weekCount++;
+        //        week.GetComponentInChildren<Text>().text = "Week" + "" +  weekCount;
+        //        weekX = weekX + 100;
+        //        if(j == 3)
+        //        {
+        //            weekX = 60;
+        //            WeekY = WeekY - 100;
+        //        }
+        //    }
+        //}
     }
 
     public void InputTextToTrue()
     {
-        for (int i = 0; i < ListOfWeek.Count; i++)
+        CheckInput checkInput = GetComponent<CheckInput>();
+        if (checkInput.playerInput == true)
         {
-            if(numberOfSave == ListOfWeek[i] && exerciseSaveBool == 0)
-            {
-                //Debug yes 
-                inputNumber.SetActive(true);
-                inputText.SetActive(false);
-            }
-            else if(numberOfSave == ListOfWeek[i] && exerciseSaveBool == 1)
-            {
-                //Debug no 
-                inputNumber.SetActive(false);
-                inputText.SetActive(true);
-            }
+            
+        }
+        else
+        {
+            inputNumber.SetActive(true);
+            inputText.SetActive(false);
         }
     }
 
 
     public void SaveInput()
     {
+
         for(int i = 0; i < inputFields.Count; i++)
         {
             PlayerPrefs.SetString("Exercise" + i,  inputFields[i].GetComponent<Text>().text);
             Debug.Log(PlayerPrefs.GetString("Exercise" + i));
         }
-        numberOfSave++;
-        PlayerPrefs.SetInt("ExerciseSaveWeek" + numberOfSave++, exerciseSaveBool = 1);
-        PlayerPrefs.SetInt("NumberOfSave", numberOfSave);
+      
     }
 
 	public void OpenGlobeScene()

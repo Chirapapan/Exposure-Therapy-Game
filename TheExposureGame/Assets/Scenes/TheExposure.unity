@@ -161,7 +161,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 945018025}
   m_HandleRect: {fileID: 945018024}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0.99662924
   m_Size: 0.3767507
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -2100,7 +2100,7 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.019836001, y: -5}
+  m_AnchoredPosition: {x: -0.019836001, y: 0}
   m_SizeDelta: {x: 450, y: 538}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1123171962
@@ -2235,8 +2235,31 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1213921365}
+        m_MethodName: InputTextToTrue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1131750100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1131750095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19800da5ea163ef4697bc69d5ee262f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInput: 0
 --- !u!1 &1182176299
 GameObject:
   m_ObjectHideFlags: 0
@@ -3587,7 +3610,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 3}
   m_SizeDelta: {x: 0, y: 1428}
   m_Pivot: {x: 0, y: 1}
 --- !u!224 &1818462132

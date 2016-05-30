@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/TheExposure.unity
+- path: Assets/Scenes/Globe.unity
   isLoaded: 1
   isActive: 1

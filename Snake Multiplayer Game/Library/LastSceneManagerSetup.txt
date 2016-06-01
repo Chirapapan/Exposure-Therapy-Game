@@ -1,0 +1,4 @@
+sceneSetups:
+- path: C:/Users/Chirapapan Puangpai/Documents/GitHub/Snake/Snake/Assets/Scenes/ZhifanScene.unity
+  isLoaded: 1
+  isActive: 1

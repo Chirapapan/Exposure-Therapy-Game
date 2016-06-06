@@ -36,115 +36,115 @@ public class GameManager : MonoBehaviour {
 
     private List<int> ListOfWeek = new List<int>();
 
-    void Start()
-    {
-        numberOfSave = PlayerPrefs.GetInt("NumberOfSave");
-    }
+    //void Start()
+    //{
+    //    numberOfSave = PlayerPrefs.GetInt("NumberOfSave");
+    //}
 
-    public void IncreaseNumber()
-    {
-        numberOfExcercise = GameObject.Find("NumberOfExercises").GetComponent<Text>();
-        if (exerciseCount < 10)
-        {
-            exerciseCount++;
-            numberOfExcercise.text = "" + exerciseCount;
-        }
-    }
+    //public void IncreaseNumber()
+    //{
+    //    numberOfExcercise = GameObject.Find("NumberOfExercises").GetComponent<Text>();
+    //    if (exerciseCount < 10)
+    //    {
+    //        exerciseCount++;
+    //        numberOfExcercise.text = "" + exerciseCount;
+    //    }
+    //}
 
-    public void DecreaseNumber()
-    {
-        numberOfExcercise = GameObject.Find("NumberOfExercises").GetComponent<Text>();
-        if (exerciseCount > 4)
-        {
-            exerciseCount--;
-            numberOfExcercise.text = "" + exerciseCount;
-        }
-    }
+    //public void DecreaseNumber()
+    //{
+    //    numberOfExcercise = GameObject.Find("NumberOfExercises").GetComponent<Text>();
+    //    if (exerciseCount > 4)
+    //    {
+    //        exerciseCount--;
+    //        numberOfExcercise.text = "" + exerciseCount;
+    //    }
+    //}
 
-    public void InitExercises()
-    {
-        inputText.SetActive(true);
-        inputNumber.SetActive(false);
-        for (int i = 0; i < exerciseCount; i++)
-        {
-            fearState = (GameObject)Instantiate(fearStates);
-            fearState.transform.SetParent(fearField, false);
-            RectTransform rect = fearState.GetComponent<RectTransform>();
-            rect.localPosition = new Vector3(x, y, 0);
-            y = y - 60;
-            int counter = i + 1;
-            InputField number = fearState.GetComponent<InputField>();
-            number.text = "What is your fear number " + counter + " ?";
+    //public void InitExercises()
+    //{
+    //    inputText.SetActive(true);
+    //    inputNumber.SetActive(false);
+    //    for (int i = 0; i < exerciseCount; i++)
+    //    {
+    //        fearState = (GameObject)Instantiate(fearStates);
+    //        fearState.transform.SetParent(fearField, false);
+    //        RectTransform rect = fearState.GetComponent<RectTransform>();
+    //        rect.localPosition = new Vector3(x, y, 0);
+    //        y = y - 60;
+    //        int counter = i + 1;
+    //        InputField number = fearState.GetComponent<InputField>();
+    //        number.text = "What is your fear number " + counter + " ?";
 
-            inputFields.Add(fearState);
-        }
+    //        inputFields.Add(fearState);
+    //    }
 
-        //int playerPrefNum = PlayerPrefs.GetInt("ExerciseNum");
+    //    //int playerPrefNum = PlayerPrefs.GetInt("ExerciseNum");
 
-        //if (playerPrefNum == 0)
-        //{
-        //    playerPrefNum = exerciseCount;
-        //}
-        //else
-        //{
-        //    playerPrefNum = playerPrefNum + exerciseCount;
-        //    PlayerPrefs.SetInt("ExerciseNum", playerPrefNum);
-        //}
+    //    //if (playerPrefNum == 0)
+    //    //{
+    //    //    playerPrefNum = exerciseCount;
+    //    //}
+    //    //else
+    //    //{
+    //    //    playerPrefNum = playerPrefNum + exerciseCount;
+    //    //    PlayerPrefs.SetInt("ExerciseNum", playerPrefNum);
+    //    //}
 
-        PlayerPrefs.SetInt("NumberOfExercises", exerciseCount);
+    //    PlayerPrefs.SetInt("NumberOfExercises", exerciseCount);
   
-    }
+    //}
 
-    public void InitWeek()
-    {
+    //public void InitWeek()
+    //{
 
-        //int weekCount = 0;
-        //GetPlayerPrefsIntoList();
-        //for (int i = 0; i < ListOfWeek.Count; i++)
-        //{
-        //    for (int j = 0; j < 4; j++)
-        //    {
-        //        week = (GameObject)Instantiate(weeks);
-        //        week.transform.SetParent(content, false);
-        //        RectTransform rect = week.GetComponent<RectTransform>();
-        //        rect.localPosition = new Vector3(weekX, WeekY, 0);
-        //        weekCount++;
-        //        week.GetComponentInChildren<Text>().text = "Week" + "" +  weekCount;
-        //        weekX = weekX + 100;
-        //        if(j == 3)
-        //        {
-        //            weekX = 60;
-        //            WeekY = WeekY - 100;
-        //        }
-        //    }
-        //}
-    }
+    //    int weekCount = 0;
+    //    GetPlayerPrefsIntoList();
+    //    for (int i = 0; i < ListOfWeek.Count; i++)
+    //    {
+    //        for (int j = 0; j < 4; j++)
+    //        {
+    //            week = (GameObject)Instantiate(weeks);
+    //            week.transform.SetParent(content, false);
+    //            RectTransform rect = week.GetComponent<RectTransform>();
+    //            rect.localPosition = new Vector3(weekX, WeekY, 0);
+    //            weekCount++;
+    //            week.GetComponentInChildren<Text>().text = "Week" + "" + weekCount;
+    //            weekX = weekX + 100;
+    //            if (j == 3)
+    //            {
+    //                weekX = 60;
+    //                WeekY = WeekY - 100;
+    //            }
+    //        }
+    //    }
+    //}
 
-    public void InputTextToTrue()
-    {
-        CheckInput checkInput = GetComponent<CheckInput>();
-        if (checkInput.playerInput == true)
-        {
+    //public void InputTextToTrue()
+    //{
+    //    CheckInput checkInput = GetComponent<CheckInput>();
+    //    if (checkInput.playerInput == true)
+    //    {
             
-        }
-        else
-        {
-            inputNumber.SetActive(true);
-            inputText.SetActive(false);
-        }
-    }
+    //    }
+    //    else
+    //    {
+    //        inputNumber.SetActive(true);
+    //        inputText.SetActive(false);
+    //    }
+    //}
 
 
-    public void SaveInput()
-    {
+    //public void SaveInput()
+    //{
 
-        for(int i = 0; i < inputFields.Count; i++)
-        {
-            PlayerPrefs.SetString("Exercise" + i,  inputFields[i].GetComponent<Text>().text);
-            Debug.Log(PlayerPrefs.GetString("Exercise" + i));
-        }
+    //    for(int i = 0; i < inputFields.Count; i++)
+    //    {
+    //        PlayerPrefs.SetString("Exercise" + i,  inputFields[i].GetComponent<Text>().text);
+    //        Debug.Log(PlayerPrefs.GetString("Exercise" + i));
+    //    }
       
-    }
+    //}
 
 	public void OpenGlobeScene()
 	{
@@ -156,12 +156,12 @@ public class GameManager : MonoBehaviour {
         SceneManager.LoadScene("TheExposure");
     }
 
-    private void GetPlayerPrefsIntoList()
-    {
-        ListOfWeek.Clear();
-        for (int i = 0; i < numberOfSave; i++)
-        {
-            ListOfWeek.Add(PlayerPrefs.GetInt("ExerciseSaveWeek" + i));
-        }
-    }
+    //private void GetPlayerPrefsIntoList()
+    //{
+    //    ListOfWeek.Clear();
+    //    for (int i = 0; i < numberOfSave; i++)
+    //    {
+    //        ListOfWeek.Add(PlayerPrefs.GetInt("ExerciseSaveWeek" + i));
+    //    }
+    //}
 }

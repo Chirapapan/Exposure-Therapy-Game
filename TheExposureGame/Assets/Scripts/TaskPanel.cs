@@ -18,9 +18,9 @@ public class TaskPanel : MonoBehaviour
     {
 
     }
-
+    /*
     public void SetDescription(City inputCityScript)
     {
         taskDescription.text = PlayerPrefs.GetString("Exercise" + inputCityScript.exerciseNumber);
-    }
+    }*/
 }

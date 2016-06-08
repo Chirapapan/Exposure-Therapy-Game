@@ -143,9 +143,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 2077613435}
   speed: 2
-  x: 320
-  y: 300
-  z: 316
+  x: 323
+  y: 58
+  z: 182
   zoomingIn: 0
   cloud: {fileID: 499361030}
 --- !u!4 &22409935 stripped
@@ -1753,9 +1753,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 2077613435}
   speed: 2
-  x: 48
-  y: 164
-  z: 248
+  x: 311
+  y: 175
+  z: 104
   zoomingIn: 0
   cloud: {fileID: 499361030}
 --- !u!1001 &477855351
@@ -3717,9 +3717,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 2077613435}
   speed: 2
-  x: 359
-  y: 38.5
-  z: 26
+  x: 15
+  y: 32.5
+  z: 25
   zoomingIn: 0
   cloud: {fileID: 499361030}
 --- !u!1 &580097861
@@ -5966,9 +5966,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 2077613435}
   speed: 2
-  x: 340
-  y: 120.5
-  z: 318
+  x: 309
+  y: 228.5
+  z: 185
   zoomingIn: 0
   cloud: {fileID: 499361030}
 --- !u!1 &1449973599
@@ -6148,9 +6148,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 2077613435}
   speed: 2
-  x: 341.5
-  y: 234
-  z: 264
+  x: 302
+  y: 150
+  z: 18
   zoomingIn: 0
   cloud: {fileID: 499361030}
 --- !u!1 &1476211055
@@ -6211,9 +6211,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 2077613435}
   speed: 2
-  x: 326
-  y: 313
-  z: 22
+  x: 310
+  y: 347
+  z: 342
   zoomingIn: 0
   cloud: {fileID: 499361030}
 --- !u!1001 &1483839628

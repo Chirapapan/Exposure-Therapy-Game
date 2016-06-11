@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 public class City : MonoBehaviour
 {
-
     public int planetNum;
     public int continentNum;
     public int cityNum;
@@ -16,8 +15,14 @@ public class City : MonoBehaviour
     private bool isLocked = true;
     private GameObject lockChildObj;
 
+    private Planet planetScript;
+    private PanelManager panelMangerScript;
+
     void Start()
     {
+        planetScript = transform.root.GetComponent<Planet>();
+        panelMangerScript = planetScript.taskPanel.transform.root.GetComponent<PanelManager>();
+
         lockChildObj = transform.GetChild(0).gameObject;
 
         lastPlanet = PlayerPrefs.GetInt("LastPlanet");
@@ -55,9 +60,20 @@ public class City : MonoBehaviour
             lockChildObj.SetActive(false);
         }
     }
-
-    void OnPress()
+    
+    void OnMouseOver()
     {
+        if (Input.GetMouseButtonDown(0))
+        {
+            panelMangerScript.Option(planetScript.taskPanel);
+            planetScript.doneButton.onClick.AddListener(() => FinishExercise());
+        }
+    }
 
+    void FinishExercise()
+    {
+        PlayerPrefs.SetInt("LastPlanet", planetNum);
+        PlayerPrefs.SetInt("LastContinent", continentNum);
+        PlayerPrefs.SetInt("lastExercise", cityNum);
     }
 }

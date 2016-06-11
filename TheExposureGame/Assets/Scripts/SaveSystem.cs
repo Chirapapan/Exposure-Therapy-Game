@@ -7,10 +7,10 @@ using System.Collections.Generic;
 
 public class SaveSystem : MonoBehaviour
 {
-    public GameObject weeks;
-    public Transform content;
+    public GameObject weeks;                                        //weeks prefab - not used
+    public Transform content;                                       //scrollrectcontent - not used
 
-    public GameObject fearStates;                                   //GameObject prefab to spawn new inputfields
+    public GameObject fearStatesInputField;                         //GameObject prefab to spawn new inputfields
     public Transform fearFieldHolder;                               //GameObject holds all the fear input fields
 
     public GameObject inputNumberPanel;                             //GameObject input number panel
@@ -32,7 +32,7 @@ public class SaveSystem : MonoBehaviour
 
     void Start()
     {
-
+        //PlayerPrefs.DeleteAll();
     }
 
     /// <summary>
@@ -64,8 +64,9 @@ public class SaveSystem : MonoBehaviour
     /// </summary>
     public void InitExercises()
     {
-        int x = 135;
-        int y = 135;
+        RectTransform holderRect = fearFieldHolder.GetComponent<RectTransform>();
+        float x = holderRect.position.x;
+        float y = holderRect.position.y;
 
         inputTextPanel.SetActive(true);
         inputNumberPanel.SetActive(false);
@@ -82,11 +83,11 @@ public class SaveSystem : MonoBehaviour
         }
         for (int i = 0; i < repeat; i++)
         {
-            GameObject fearState = (GameObject)Instantiate(fearStates);
+            GameObject fearState = (GameObject)Instantiate(fearStatesInputField);
             fearState.transform.SetParent(fearFieldHolder, false);
             RectTransform rect = fearState.GetComponent<RectTransform>();
-            rect.localPosition = new Vector3(x, y, 0);
-            y = y - 60;
+            rect.position = new Vector3(x, y, 0);
+            y -= (holderRect.sizeDelta.y)/3;
             int counter = i + 1;
             InputField number = fearState.GetComponent<InputField>();
 

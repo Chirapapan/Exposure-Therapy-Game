@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class CameraLookAt : MonoBehaviour
@@ -11,7 +12,9 @@ public class CameraLookAt : MonoBehaviour
     public float x;
     public float y;
     public float z;
-    public bool zoomingIn;
+    public ParticleSystem cloud;
+    public Panel continent;
+    public Sprite continentImage;
 
     //Private Vars
     private Vector3 mousePosition;
@@ -21,14 +24,18 @@ public class CameraLookAt : MonoBehaviour
     private float timer;
     private Quaternion currentRotation;
     private Quaternion newRotation;
-
+    private bool zoomingIn;
     private float privateTimer;
     private bool privateTimerCheck;
-   public ParticleSystem cloud;
+    private Rotate rotate;
+    private AudioSource zoomInAudio;
+  
 
     void Start()
     {
         camera = Camera.main.GetComponent<Transform>();
+        rotate = GetComponent<Rotate>();
+        zoomInAudio = gameObject.GetComponent<AudioSource>();
         //cloud = ParticleSystem.FindObjectOfType<ParticleSystem>();
     }
     void Update()
@@ -54,11 +61,14 @@ public class CameraLookAt : MonoBehaviour
 
         if(zoomingIn == true)
         {
+            zoomInAudio.Play();
             camera.transform.Translate(Vector3.forward* 2.5f * Time.deltaTime);
+           
             if (camera.transform.position.z > -5)
             {
                 zoomingIn = false;
-               
+                //zoomInAudio.Stop();
+                //rotate.spinning = true;
             }
         }
         
@@ -85,6 +95,7 @@ public class CameraLookAt : MonoBehaviour
             {
                
                 rotating = true;
+                //rotate.spinning = false;
             }
 
         }

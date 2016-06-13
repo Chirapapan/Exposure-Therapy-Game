@@ -156,6 +156,11 @@ public class GameManager : MonoBehaviour {
         SceneManager.LoadScene("TheExposure");
     }
 
+    public void EnableGameObject(GameObject obj)
+    {
+        obj.SetActive(true);
+    }
+
     //private void GetPlayerPrefsIntoList()
     //{
     //    ListOfWeek.Clear();

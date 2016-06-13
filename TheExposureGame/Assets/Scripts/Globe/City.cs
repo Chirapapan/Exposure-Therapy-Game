@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
+//This Script is for every city
 public class City : MonoBehaviour
 {
     public int planetNum;
@@ -12,60 +13,64 @@ public class City : MonoBehaviour
     private int lastContinent;
     private int lastExercise;
 
-    private bool isLocked = true;
-    private GameObject lockChildObj;
+    public bool isLocked = true;
 
-    private Planet planetScript;
+    public Planet planetScript;
     private PanelManager panelMangerScript;
+    private TaskPanel taskPanelScript;
+    private Continent continentScript;
 
     void Start()
     {
-        planetScript = transform.root.GetComponent<Planet>();
-        panelMangerScript = planetScript.taskPanel.transform.root.GetComponent<PanelManager>();
-
-        lockChildObj = transform.GetChild(0).gameObject;
+        panelMangerScript = planetScript.Canvas.GetComponent<PanelManager>();
+        taskPanelScript = planetScript.taskPanel.GetComponent<TaskPanel>();
 
         lastPlanet = PlayerPrefs.GetInt("LastPlanet");
         lastContinent = PlayerPrefs.GetInt("LastContinent");
-        lastExercise = PlayerPrefs.GetInt("lastExercise");
-
-        CheckLock();
+        
     }
 
-    void CheckLock()
+    /// <summary>
+    /// checks if the cities should be closed or not
+    /// </summary>
+    public void CheckLock()
     {
-        if(cityNum == 0)
+        lastExercise = PlayerPrefs.GetInt("lastExercise");
+        if (cityNum == 0)
         {
             isLocked = false;
-            if ((lastPlanet - 1) == planetNum && isLocked == true)
-            {
-                isLocked = false;
-                if((lastContinent - 1) == lastContinent && isLocked == true)
-                {
-                    isLocked = false;
-                    if((lastExercise - 1) == lastExercise && isLocked == true)
-                    {
-                        isLocked = false;
-                    }
-                }
-            }
+        }
+        if (lastPlanet == planetNum && isLocked == true && lastPlanet != 0)
+        {
+            isLocked = false;
+        }
+
+        if (lastContinent == continentNum && isLocked == true && lastContinent != 0)
+        {
+            isLocked = false;
+        }
+
+        if (lastExercise >= cityNum && isLocked == true)
+        {
+            isLocked = false;
         }
 
         if(isLocked == true)
         {
-            lockChildObj.SetActive(true);
+            //is locked
         }
         else if(isLocked == false)
         {
-            lockChildObj.SetActive(false);
+            //is unlocked
         }
     }
     
-    void OnMouseOver()
+    public void OnPress()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (isLocked == false)
         {
             panelMangerScript.Option(planetScript.taskPanel);
+            taskPanelScript.SetDescription(planetNum, continentNum, cityNum);
             planetScript.doneButton.onClick.AddListener(() => FinishExercise());
         }
     }
@@ -74,6 +79,12 @@ public class City : MonoBehaviour
     {
         PlayerPrefs.SetInt("LastPlanet", planetNum);
         PlayerPrefs.SetInt("LastContinent", continentNum);
-        PlayerPrefs.SetInt("lastExercise", cityNum);
+        PlayerPrefs.SetInt("lastExercise", cityNum + 1);
+        continentScript.CheckLockAllCities();
+    }
+
+    public void SetContinentReference(Continent continent)
+    {
+        continentScript = continent;
     }
 }

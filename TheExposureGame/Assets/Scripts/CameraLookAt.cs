@@ -29,7 +29,7 @@ public class CameraLookAt : MonoBehaviour
     private bool privateTimerCheck;
     private Rotate rotate;
     private AudioSource zoomInAudio;
-  
+    private Continent continentScript;
 
     void Start()
     {
@@ -37,6 +37,8 @@ public class CameraLookAt : MonoBehaviour
         rotate = GetComponent<Rotate>();
         zoomInAudio = gameObject.GetComponent<AudioSource>();
         //cloud = ParticleSystem.FindObjectOfType<ParticleSystem>();
+
+        continentScript = transform.GetComponent<Continent>();
     }
     void Update()
     {
@@ -69,6 +71,10 @@ public class CameraLookAt : MonoBehaviour
                 zoomingIn = false;
                 //zoomInAudio.Stop();
                 //rotate.spinning = true;
+                continentScript.GoToLevel();
+                cloud.Clear(); //has to be replaced to be slowly fade out, preferbly from the center
+                cloud.Stop();
+                transform.root.gameObject.SetActive(false);
             }
         }
         
@@ -91,9 +97,8 @@ public class CameraLookAt : MonoBehaviour
                 timer = Time.time;
                 currentRotation = target.rotation;
             }
-            else
+            else if(oneClick == true && continentScript.isLocked == false)
             {
-               
                 rotating = true;
                 //rotate.spinning = false;
             }

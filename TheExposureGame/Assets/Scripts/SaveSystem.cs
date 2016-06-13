@@ -32,7 +32,7 @@ public class SaveSystem : MonoBehaviour
 
     void Start()
     {
-        //PlayerPrefs.DeleteAll();
+        PlayerPrefs.DeleteAll();
     }
 
     /// <summary>
@@ -136,7 +136,7 @@ public class SaveSystem : MonoBehaviour
         if(filled == false)
         {
             inputNumberPanel.SetActive(true);
-            inputTextPanel.SetActive(true);
+            inputTextPanel.SetActive(false);
         }
         else
         {
@@ -156,11 +156,19 @@ public class SaveSystem : MonoBehaviour
         {
             PlayerPrefs.SetString("Exercise" + planetNum + "-" + weekNum + "-" + i , inputFields[i].GetComponent<Text>().text);
         }
-
         PlayerPrefs.SetInt("Amount" + planetNum + "-" + weekNum, inputFields.Count);
         for(int j = 0; j < inputFields.Count; j++)
         {
             Destroy( inputFields[j]);
+        }
+        inputFields.Clear();
+    }
+
+    public void OnBack()
+    {
+        for (int j = 0; j < inputFields.Count; j++)
+        {
+            Destroy(inputFields[j]);
         }
         inputFields.Clear();
     }
@@ -177,9 +185,8 @@ public class SaveSystem : MonoBehaviour
 
 
     /// <summary>
-    /// Set the array information in SaveSystem class
+    /// Set the information in SaveSystem class
     /// </summary>
-    /// <param name="weekList">List of week with info</param>
     public void SetWeekInfo(int planetNumber, int weekNumber, bool filledIn)
     {
         planetNum = planetNumber;

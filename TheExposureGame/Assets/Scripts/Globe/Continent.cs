@@ -9,6 +9,7 @@ public class Continent : MonoBehaviour
     public int planetNum;
     public int continentNum;
     public Panel levelPanel;
+    public float scaleValue = 1.5f;
 
     public City[] baseCities;
     public City[] otherCities;
@@ -26,9 +27,15 @@ public class Continent : MonoBehaviour
     private Planet planetScript;
     private PanelManager panelMangerScript;
 
+    private Vector2 startSize;
+    private Vector2 newStartSize;
+    private Vector2 size;
+
     // Use this for initialization
     void Start()
     {
+        startSize = size = levelPanel.GetComponent<RectTransform>().sizeDelta;
+
         planetScript = transform.root.GetComponent<Planet>();
         panelMangerScript = planetScript.Canvas.GetComponent<PanelManager>();
 
@@ -123,9 +130,11 @@ public class Continent : MonoBehaviour
     /// </summary>
     public void GoToLevel()
     {
+        ScaleDownPanel();
         InitBaseCities();
         ShowOtherCities();
         CheckLockAllCities();
+        StartCoroutine(ScaleUpPanel());
         panelMangerScript.Option(levelPanel);
     }
 
@@ -141,5 +150,35 @@ public class Continent : MonoBehaviour
             otherCities[j].CheckLock();
             otherCities[j].SetContinentReference(this);
         }
+    }
+
+    public void ScaleDownPanel()
+    {
+        newStartSize.x = startSize.x / scaleValue;
+        newStartSize.y = startSize.y / scaleValue;
+        levelPanel.GetComponent<RectTransform>().sizeDelta = newStartSize;
+    }
+
+    public IEnumerator ScaleUpPanel()
+    {
+
+        //yield return new WaitForSeconds(2);
+        for (float i = newStartSize.x; i < startSize.x;)
+        {
+            Debug.Log(i);
+            newStartSize.x = i;
+            newStartSize.y = i++;
+
+            yield return new WaitForSeconds(1f);
+        }
+        //if (newStartSize.x <= startSize.x && newStartSize.y <= startSize.y)
+        //{
+        //    Debug.Log(newStartSize.x < startSize.x);
+        //    newStartSize.x = ++;
+        //    newStartSize.y = newStartSize.y++;
+        //    levelPanel.GetComponent<RectTransform>().sizeDelta = newStartSize;
+        //    yield return new WaitForSeconds(1f);
+
+        //}
     }
 }

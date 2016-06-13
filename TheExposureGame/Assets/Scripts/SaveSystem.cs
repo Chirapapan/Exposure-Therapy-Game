@@ -12,6 +12,7 @@ public class SaveSystem : MonoBehaviour
 
     public GameObject fearStatesInputField;                         //GameObject prefab to spawn new inputfields
     public Transform fearFieldHolder;                               //GameObject holds all the fear input fields
+    public Transform holder;
 
     public GameObject inputNumberPanel;                             //GameObject input number panel
     public GameObject inputTextPanel;                               //GameObject input text panel
@@ -67,7 +68,7 @@ public class SaveSystem : MonoBehaviour
         RectTransform holderRect = fearFieldHolder.GetComponent<RectTransform>();
         float x = holderRect.position.x;
         float y = holderRect.position.y;
-
+        float height = holderRect.sizeDelta.y;
         inputTextPanel.SetActive(true);
         inputNumberPanel.SetActive(false);
 
@@ -84,11 +85,11 @@ public class SaveSystem : MonoBehaviour
         for (int i = 0; i < repeat; i++)
         {
             GameObject fearState = (GameObject)Instantiate(fearStatesInputField);
-            fearState.transform.SetParent(fearFieldHolder, false);
             RectTransform rect = fearState.GetComponent<RectTransform>();
             rect.position = new Vector3(x, y, 0);
-            y -= (holderRect.sizeDelta.y)/3;
+            y -= height;
             int counter = i + 1;
+            fearState.transform.SetParent(holder, false);
             InputField number = fearState.GetComponent<InputField>();
 
             if (filled == false)
@@ -190,7 +191,7 @@ public class SaveSystem : MonoBehaviour
     public void SetWeekInfo(int planetNumber, int weekNumber, bool filledIn)
     {
         planetNum = planetNumber;
-        weekNum = planetNumber;
+        weekNum = weekNumber;
         filled = filledIn;
         CheckHasSave();
     }

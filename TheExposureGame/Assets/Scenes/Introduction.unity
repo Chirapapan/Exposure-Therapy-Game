@@ -85,6 +85,12 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &118691371 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11419458, guid: 2e3559be7f0c38442b74e97f75b366b5,
+    type: 2}
+  m_PrefabInternal: {fileID: 762648966}
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &428847995
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,23 +298,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22436064, guid: 2e3559be7f0c38442b74e97f75b366b5, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 219
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22436064, guid: 2e3559be7f0c38442b74e97f75b366b5, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 952
+      value: 1921
       objectReference: {fileID: 0}
     - target: {fileID: 22436064, guid: 2e3559be7f0c38442b74e97f75b366b5, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -8
+      value: 0.009063721
       objectReference: {fileID: 0}
     - target: {fileID: 22436064, guid: 2e3559be7f0c38442b74e97f75b366b5, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 931
+      value: 1079.3
       objectReference: {fileID: 0}
     - target: {fileID: 22466426, guid: 2e3559be7f0c38442b74e97f75b366b5, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -351
+      value: -848
       objectReference: {fileID: 0}
     - target: {fileID: 22466426, guid: 2e3559be7f0c38442b74e97f75b366b5, type: 2}
       propertyPath: m_SizeDelta.y
@@ -336,7 +342,7 @@ Prefab:
       objectReference: {fileID: 1358970435}
     - target: {fileID: 11472194, guid: 2e3559be7f0c38442b74e97f75b366b5, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OpenStart
+      value: NextStorySprite
       objectReference: {fileID: 0}
     - target: {fileID: 11472194, guid: 2e3559be7f0c38442b74e97f75b366b5, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -402,6 +408,19 @@ Prefab:
       propertyPath: m_FontData.m_MaxSize
       value: 300
       objectReference: {fileID: 0}
+    - target: {fileID: 22466426, guid: 2e3559be7f0c38442b74e97f75b366b5, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22436064, guid: 2e3559be7f0c38442b74e97f75b366b5, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11419458, guid: 2e3559be7f0c38442b74e97f75b366b5, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 638e57dc4e7cf4d4c848ee7f91271a17,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2e3559be7f0c38442b74e97f75b366b5, type: 2}
   m_IsPrefabParent: 0
@@ -610,6 +629,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11429550, guid: d43e4e4cf0207ac44836b83834516945, type: 2}
+      propertyPath: storyBoards.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 473280, guid: d43e4e4cf0207ac44836b83834516945, type: 2}
       propertyPath: m_LocalPosition.x
       value: 184.9434
@@ -642,6 +665,20 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 11429550, guid: d43e4e4cf0207ac44836b83834516945, type: 2}
+      propertyPath: story
+      value: 
+      objectReference: {fileID: 118691371}
+    - target: {fileID: 11429550, guid: d43e4e4cf0207ac44836b83834516945, type: 2}
+      propertyPath: storyBoards.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 638e57dc4e7cf4d4c848ee7f91271a17,
+        type: 3}
+    - target: {fileID: 11429550, guid: d43e4e4cf0207ac44836b83834516945, type: 2}
+      propertyPath: storyBoards.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 4a29a5751cd713447bbac8a5bcac8a72,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d43e4e4cf0207ac44836b83834516945, type: 2}
   m_IsPrefabParent: 0
@@ -769,11 +806,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 818460b5acb816340bb6c895206ed5e7, type: 3}
-    m_FontSize: 0
+    m_FontSize: 60
     m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 40
+    m_BestFit: 1
+    m_MinSize: 30
+    m_MaxSize: 200
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1

@@ -16,6 +16,7 @@ public class CameraLookAt : MonoBehaviour
     public Panel continent;
     public Sprite continentImage;
 
+
     //Private Vars
     private Vector3 mousePosition;
     private float delay = 0.25f;
@@ -31,12 +32,9 @@ public class CameraLookAt : MonoBehaviour
     private AudioSource zoomInAudio;
     private Continent continentScript;
 
-    private Vector3 cameraStartPos;
-
     void Start()
     {
         camera = Camera.main.GetComponent<Transform>();
-        cameraStartPos = camera.position;
         rotate = GetComponent<Rotate>();
         zoomInAudio = gameObject.GetComponent<AudioSource>();
         //cloud = ParticleSystem.FindObjectOfType<ParticleSystem>();
@@ -63,7 +61,6 @@ public class CameraLookAt : MonoBehaviour
             }
 
         }
-
         if(zoomingIn == true)
         {
             zoomInAudio.Play();
@@ -77,8 +74,8 @@ public class CameraLookAt : MonoBehaviour
                 continentScript.GoToLevel();
                 cloud.Clear(); //has to be replaced to be slowly fade out, preferbly from the center
                 cloud.Stop();
-                camera.transform.position = cameraStartPos;
                 transform.root.gameObject.SetActive(false);
+               // StartCoroutine(continentScript.ScaleUpPanel();
             }
         }
         

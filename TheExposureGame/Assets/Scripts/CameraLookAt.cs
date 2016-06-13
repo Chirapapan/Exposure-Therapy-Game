@@ -31,9 +31,12 @@ public class CameraLookAt : MonoBehaviour
     private AudioSource zoomInAudio;
     private Continent continentScript;
 
+    private Vector3 cameraStartPos;
+
     void Start()
     {
         camera = Camera.main.GetComponent<Transform>();
+        cameraStartPos = camera.position;
         rotate = GetComponent<Rotate>();
         zoomInAudio = gameObject.GetComponent<AudioSource>();
         //cloud = ParticleSystem.FindObjectOfType<ParticleSystem>();
@@ -74,6 +77,7 @@ public class CameraLookAt : MonoBehaviour
                 continentScript.GoToLevel();
                 cloud.Clear(); //has to be replaced to be slowly fade out, preferbly from the center
                 cloud.Stop();
+                camera.transform.position = cameraStartPos;
                 transform.root.gameObject.SetActive(false);
             }
         }

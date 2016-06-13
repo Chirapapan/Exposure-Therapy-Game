@@ -45,11 +45,10 @@ public class Continent : MonoBehaviour
     /// <summary>
     /// Checks if the Continent should be locked or not
     /// </summary>
-    void CheckLock()
+    public void CheckLock()
     {
         lastContinent = PlayerPrefs.GetInt("LastContinent");
         lastExercise = PlayerPrefs.GetInt("lastExercise");
-
         if (continentNum == 0)
         {
             isLocked = false;

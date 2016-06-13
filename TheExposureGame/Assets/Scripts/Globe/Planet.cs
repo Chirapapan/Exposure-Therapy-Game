@@ -11,16 +11,14 @@ public class Planet : MonoBehaviour
 
     public int planetNum;
 
-    // Use this for initialization
-    void Start()
+    public Continent[] continents;
+   
+    public void CheckLockContinents()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        for(int i = 0; i < continents.Length; i++)
+        {
+            continents[i].CheckLock();
+        }
     }
 
     public void RemoveListenersOnButton()

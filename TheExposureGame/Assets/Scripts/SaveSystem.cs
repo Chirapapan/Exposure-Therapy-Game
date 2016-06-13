@@ -32,7 +32,7 @@ public class SaveSystem : MonoBehaviour
 
     void Start()
     {
-        PlayerPrefs.DeleteAll();
+        //PlayerPrefs.DeleteAll();
     }
 
     /// <summary>

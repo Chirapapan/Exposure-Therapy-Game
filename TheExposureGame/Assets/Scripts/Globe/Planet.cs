@@ -12,6 +12,8 @@ public class Planet : MonoBehaviour
     public int planetNum;
 
     public Continent[] continents;
+
+    public GameObject backgroundSea;
    
     public void CheckLockContinents()
     {
@@ -25,4 +27,10 @@ public class Planet : MonoBehaviour
     {
         doneButton.onClick.RemoveAllListeners();
     }
+
+    public void TurnOnSea()
+    {
+        backgroundSea.SetActive(true);
+    }
+
 }

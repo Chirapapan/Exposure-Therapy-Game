@@ -69,7 +69,7 @@ public class City : MonoBehaviour
     {
         if (isLocked == false)
         {
-            panelMangerScript.Option(planetScript.taskPanel);
+            panelMangerScript.OverlayOption(planetScript.taskPanel);
             taskPanelScript.SetDescription(planetNum, continentNum, cityNum);
             planetScript.doneButton.onClick.AddListener(() => FinishExercise());
         }

@@ -30,11 +30,15 @@ public class Continent : MonoBehaviour
     private Vector2 startSize;
     private Vector2 newStartSize;
     private Vector2 size;
+   private Animator zoomInPanelAnimator;
+    public string animatorName;
 
     // Use this for initialization
     void Start()
     {
         startSize = size = levelPanel.GetComponent<RectTransform>().sizeDelta;
+
+        zoomInPanelAnimator = levelPanel.GetComponent<Animator>();
 
         planetScript = transform.root.GetComponent<Planet>();
         panelMangerScript = planetScript.Canvas.GetComponent<PanelManager>();
@@ -61,12 +65,18 @@ public class Continent : MonoBehaviour
             isLocked = false;
         }
 
-        if (lastPlanet == planetNum && isLocked == true && lastPlanet != 0)
+        if (lastContinent >= continentNum && amountOfExercises == lastExercise)
+        {
+            ps.Play();
+            PlayerPrefs.SetInt("LastContinent", continentNum + 1);
+        }
+
+        if (lastPlanet >= planetNum && isLocked == true && lastPlanet != 0)
         {
             isLocked = false;
         }
 
-        if (lastContinent == continentNum && isLocked == true)
+        if (lastContinent >= continentNum && isLocked == true)
         {
             isLocked = false;
         }
@@ -83,10 +93,9 @@ public class Continent : MonoBehaviour
             lightSource.enabled = true;
             ps.Stop();
         }
-        if (lastContinent >= continentNum && amountOfExercises == lastExercise)
+        if(lastContinent > continentNum)
         {
             ps.Play();
-            PlayerPrefs.SetInt("LastContinent", continentNum + 1);
         }
     }
 
@@ -130,12 +139,14 @@ public class Continent : MonoBehaviour
     /// </summary>
     public void GoToLevel()
     {
-        ScaleDownPanel();
+        //ScaleDownPanel();
+        planetScript.TurnOnSea();
         InitBaseCities();
         ShowOtherCities();
         CheckLockAllCities();
-        StartCoroutine(ScaleUpPanel());
         panelMangerScript.Option(levelPanel);
+        //StartCoroutine(ScaleUpPanel());
+        zoomInPanelAnimator.Play("ContinentPanel5_ZoomIn");
     }
 
     public void CheckLockAllCities()
@@ -159,26 +170,29 @@ public class Continent : MonoBehaviour
         levelPanel.GetComponent<RectTransform>().sizeDelta = newStartSize;
     }
 
-    public IEnumerator ScaleUpPanel()
+
+    IEnumerator ScaleUpPanel()
     {
-
         //yield return new WaitForSeconds(2);
-        for (float i = newStartSize.x; i < startSize.x;)
-        {
-            Debug.Log(i);
-            newStartSize.x = i;
-            newStartSize.y = i++;
+        //for (float i = newStartSize.x; i < startSize.x;)
+        //{
+        //    yield return new WaitForSeconds(1f);
+        //    Debug.Log(i);
+        //    newStartSize.x ++;
+        //    newStartSize.y ++;
 
-            yield return new WaitForSeconds(1f);
-        }
+        //    levelPanel.GetComponent<RectTransform>().sizeDelta = newStartSize;
+            
+        //}
         //if (newStartSize.x <= startSize.x && newStartSize.y <= startSize.y)
         //{
         //    Debug.Log(newStartSize.x < startSize.x);
         //    newStartSize.x = ++;
         //    newStartSize.y = newStartSize.y++;
         //    levelPanel.GetComponent<RectTransform>().sizeDelta = newStartSize;
-        //    yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(5f);
 
+       
         //}
     }
 }

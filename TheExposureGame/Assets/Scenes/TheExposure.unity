@@ -143,7 +143,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.91781783, g: 0.9338235, b: 0.844561, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -475,7 +475,7 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000009536743, y: -0.000034332275}
+  m_AnchoredPosition: {x: -0.000009536743, y: -154}
   m_SizeDelta: {x: 561, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &100497077
@@ -505,9 +505,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 624586f64a63a7e41a9c1d6d7a4d65bb,
+    m_HighlightedSprite: {fileID: 21300000, guid: 4a02ea2a27ac3b34e94cebb883f6869e,
       type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 624586f64a63a7e41a9c1d6d7a4d65bb, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 5c412b323ebc68942a79bd26ecc7da62, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -552,7 +552,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: b94108b93794b2a4e9b74104b3dcacd3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4a02ea2a27ac3b34e94cebb883f6869e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -735,15 +735,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
       propertyPath: m_FontData.m_FontSize
-      value: 69
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
       propertyPath: m_FontData.m_MaxSize
-      value: 69
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
       propertyPath: m_FontData.m_MinSize
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
       propertyPath: m_Color.r
@@ -772,6 +772,24 @@ Prefab:
     - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
       propertyPath: m_Text
       value: Week 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11493776, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d07246cb7d283fc4f928bbedaa80ef09,
+        type: 3}
+    - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 818460b5acb816340bb6c895206ed5e7,
+        type: 3}
+    - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
+      propertyPath: m_FontData.m_BestFit
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
+      propertyPath: m_FontData.m_LineSpacing
+      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
@@ -1339,7 +1357,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -11, y: 655}
+  m_AnchoredPosition: {x: -11, y: 545}
   m_SizeDelta: {x: 710, y: 473}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &556774232
@@ -1362,7 +1380,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: a6e771d010402ad4fa80951c50616589, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 76bf663f4ced14b40997d560ee10c60f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1474,7 +1492,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
       propertyPath: m_FontData.m_FontSize
-      value: 69
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
       propertyPath: m_FontData.m_MaxSize
@@ -1511,6 +1529,20 @@ Prefab:
     - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
       propertyPath: m_Text
       value: Week 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11493776, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d07246cb7d283fc4f928bbedaa80ef09,
+        type: 3}
+    - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 818460b5acb816340bb6c895206ed5e7,
+        type: 3}
+    - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
+      propertyPath: m_FontData.m_LineSpacing
+      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
@@ -1815,7 +1847,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
       propertyPath: m_FontData.m_FontSize
-      value: 69
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
       propertyPath: m_FontData.m_MaxSize
@@ -1852,6 +1884,20 @@ Prefab:
     - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
       propertyPath: m_Text
       value: Week 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 11493776, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d07246cb7d283fc4f928bbedaa80ef09,
+        type: 3}
+    - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 818460b5acb816340bb6c895206ed5e7,
+        type: 3}
+    - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
+      propertyPath: m_FontData.m_LineSpacing
+      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
@@ -2066,7 +2112,7 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000095367, y: -250}
+  m_AnchoredPosition: {x: -0.0000095367, y: -404}
   m_SizeDelta: {x: 561, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &829439142
@@ -2096,9 +2142,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 624586f64a63a7e41a9c1d6d7a4d65bb,
+    m_HighlightedSprite: {fileID: 21300000, guid: 4a02ea2a27ac3b34e94cebb883f6869e,
       type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 624586f64a63a7e41a9c1d6d7a4d65bb, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 5c412b323ebc68942a79bd26ecc7da62, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -2132,7 +2178,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: b94108b93794b2a4e9b74104b3dcacd3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4a02ea2a27ac3b34e94cebb883f6869e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3163,18 +3209,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be8fc7906e3110c42b94e798082c9fd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  saveInput: {fileID: 0}
-  panelManagerScript: {fileID: 0}
-  mapSprite: {fileID: 0}
-  rewardSprite: {fileID: 0}
-  continentText: {fileID: 0}
-  exerciseCount: 4
-  fearStates: {fileID: 150638, guid: caa61a2c20c069447852d8405e6ad3cb, type: 2}
-  fearField: {fileID: 1818462132}
-  inputNumber: {fileID: 264994637}
-  inputText: {fileID: 1494633373}
-  weeks: {fileID: 1131750095}
-  content: {fileID: 1813913260}
+  storyBoards: []
+  story: {fileID: 0}
+  backgroundSea: {fileID: 0}
 --- !u!1 &1221272189
 GameObject:
   m_ObjectHideFlags: 0
@@ -3206,7 +3243,7 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -50, y: 339}
+  m_AnchoredPosition: {x: -469, y: -1142}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1238977050
@@ -3535,15 +3572,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
       propertyPath: m_FontData.m_FontSize
-      value: 69
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
       propertyPath: m_FontData.m_MaxSize
-      value: 69
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
       propertyPath: m_FontData.m_MinSize
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
       propertyPath: m_Color.r
@@ -3556,6 +3593,28 @@ Prefab:
     - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
       propertyPath: m_Color.b
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11493776, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d07246cb7d283fc4f928bbedaa80ef09,
+        type: 3}
+    - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 818460b5acb816340bb6c895206ed5e7,
+        type: 3}
+    - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
+      propertyPath: m_FontData.m_BestFit
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
+      propertyPath: m_Text
+      value: Week 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
+      propertyPath: m_FontData.m_LineSpacing
+      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
@@ -3822,7 +3881,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000066124, y: -896.39}
+  m_AnchoredPosition: {x: -0.0000066124, y: -847}
   m_SizeDelta: {x: 354, y: 127}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1394340176
@@ -4011,7 +4070,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
       propertyPath: m_FontData.m_FontSize
-      value: 69
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
       propertyPath: m_FontData.m_MaxSize
@@ -4048,6 +4107,20 @@ Prefab:
     - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
       propertyPath: m_Text
       value: Week 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 11493776, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d07246cb7d283fc4f928bbedaa80ef09,
+        type: 3}
+    - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 818460b5acb816340bb6c895206ed5e7,
+        type: 3}
+    - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
+      propertyPath: m_FontData.m_LineSpacing
+      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
@@ -4226,7 +4299,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000095367, y: 253}
+  m_AnchoredPosition: {x: -0.0000095367, y: 99}
   m_SizeDelta: {x: 561, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1443505021
@@ -4256,9 +4329,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 624586f64a63a7e41a9c1d6d7a4d65bb,
+    m_HighlightedSprite: {fileID: 21300000, guid: 4a02ea2a27ac3b34e94cebb883f6869e,
       type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 624586f64a63a7e41a9c1d6d7a4d65bb, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 5c412b323ebc68942a79bd26ecc7da62, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -4303,7 +4376,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: b94108b93794b2a4e9b74104b3dcacd3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4a02ea2a27ac3b34e94cebb883f6869e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4545,7 +4618,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
       propertyPath: m_FontData.m_FontSize
-      value: 69
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
       propertyPath: m_FontData.m_MaxSize
@@ -4582,6 +4655,20 @@ Prefab:
     - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
       propertyPath: m_Text
       value: Week 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11493776, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d07246cb7d283fc4f928bbedaa80ef09,
+        type: 3}
+    - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 818460b5acb816340bb6c895206ed5e7,
+        type: 3}
+    - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
+      propertyPath: m_FontData.m_LineSpacing
+      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
@@ -4774,7 +4861,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
       propertyPath: m_FontData.m_FontSize
-      value: 69
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
       propertyPath: m_FontData.m_MaxSize
@@ -4811,6 +4898,20 @@ Prefab:
     - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
       propertyPath: m_Text
       value: Week 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11493776, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d07246cb7d283fc4f928bbedaa80ef09,
+        type: 3}
+    - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 818460b5acb816340bb6c895206ed5e7,
+        type: 3}
+    - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
+      propertyPath: m_FontData.m_LineSpacing
+      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
@@ -4998,7 +5099,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
       propertyPath: m_FontData.m_FontSize
-      value: 69
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
       propertyPath: m_FontData.m_MaxSize
@@ -5035,6 +5136,20 @@ Prefab:
     - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
       propertyPath: m_Text
       value: Week 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 11493776, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d07246cb7d283fc4f928bbedaa80ef09,
+        type: 3}
+    - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 818460b5acb816340bb6c895206ed5e7,
+        type: 3}
+    - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
+      propertyPath: m_FontData.m_LineSpacing
+      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
@@ -5151,7 +5266,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
       propertyPath: m_FontData.m_FontSize
-      value: 69
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
       propertyPath: m_FontData.m_MaxSize
@@ -5188,6 +5303,20 @@ Prefab:
     - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
       propertyPath: m_Text
       value: Week 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11493776, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d07246cb7d283fc4f928bbedaa80ef09,
+        type: 3}
+    - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 818460b5acb816340bb6c895206ed5e7,
+        type: 3}
+    - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
+      propertyPath: m_FontData.m_LineSpacing
+      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
@@ -5630,7 +5759,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
       propertyPath: m_FontData.m_FontSize
-      value: 69
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
       propertyPath: m_FontData.m_MaxSize
@@ -5667,6 +5796,20 @@ Prefab:
     - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
       propertyPath: m_Text
       value: Week 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11493776, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d07246cb7d283fc4f928bbedaa80ef09,
+        type: 3}
+    - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 818460b5acb816340bb6c895206ed5e7,
+        type: 3}
+    - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
+      propertyPath: m_FontData.m_LineSpacing
+      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
@@ -6131,7 +6274,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
       propertyPath: m_FontData.m_FontSize
-      value: 69
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
       propertyPath: m_FontData.m_MaxSize
@@ -6168,6 +6311,20 @@ Prefab:
     - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
       propertyPath: m_Text
       value: Week 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 11493776, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d07246cb7d283fc4f928bbedaa80ef09,
+        type: 3}
+    - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 818460b5acb816340bb6c895206ed5e7,
+        type: 3}
+    - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
+      propertyPath: m_FontData.m_LineSpacing
+      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
@@ -6269,7 +6426,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
       propertyPath: m_FontData.m_FontSize
-      value: 69
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
       propertyPath: m_FontData.m_MaxSize
@@ -6306,6 +6463,20 @@ Prefab:
     - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
       propertyPath: m_Text
       value: Week 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11493776, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d07246cb7d283fc4f928bbedaa80ef09,
+        type: 3}
+    - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 818460b5acb816340bb6c895206ed5e7,
+        type: 3}
+    - target: {fileID: 11405208, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}
+      propertyPath: m_FontData.m_LineSpacing
+      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 62cf97c6b34f0ed4dbb6f1924f376874, type: 2}

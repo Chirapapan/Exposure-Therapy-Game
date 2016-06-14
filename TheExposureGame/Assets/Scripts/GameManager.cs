@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour {
     private GameObject currentObject;
 
     private Vector3 cameraStartPos;
+    public GameObject backgroundSea;
 
     void Start()
     {
@@ -53,7 +54,12 @@ public class GameManager : MonoBehaviour {
     public void Back()
     {
         Camera.main.transform.position = cameraStartPos;
+        TurnOffSea();
         //currentObject.GetComponent
     }
- 
+
+    public void TurnOffSea()
+    {
+        backgroundSea.SetActive(false);
+    }
 }

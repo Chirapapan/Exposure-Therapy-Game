@@ -149,6 +149,7 @@ MonoBehaviour:
   y: 58
   z: 182
   cloud: {fileID: 499361030}
+  cloud2: {fileID: 1404224737}
   continent: {fileID: 0}
   continentImage: {fileID: 0}
 --- !u!82 &20563896
@@ -157,10 +158,10 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 20563892}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5b47283ecd6194347baed44e57414b45, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f0fec9280ea80054699de91b51a9f47c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.7
   m_Pitch: 1
@@ -283,6 +284,7 @@ MonoBehaviour:
   - {fileID: 723964599}
   - {fileID: 1662414082}
   isLocked: 1
+  animatorName: ContinentPanel5_ZoomIn
 --- !u!4 &22409935 stripped
 Transform:
   m_PrefabParentObject: {fileID: 438094, guid: b48ae7333a877e14ebb42fc8a013476b, type: 2}
@@ -1795,7 +1797,7 @@ Light:
   serializedVersion: 6
   m_Type: 2
   m_Color: {r: 0.80784315, g: 0.69411767, b: 0.69411767, a: 1}
-  m_Intensity: 8
+  m_Intensity: 2.5
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -1951,6 +1953,7 @@ GameObject:
   - 92: {fileID: 217296859}
   - 124: {fileID: 217296858}
   - 81: {fileID: 217296857}
+  - 82: {fileID: 217296862}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2028,6 +2031,80 @@ Transform:
   - {fileID: 1404224735}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!82 &217296862
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 217296856}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d835d8eaa4824bf45a2f6d434982d92f, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 51
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &217784352
 GameObject:
   m_ObjectHideFlags: 0
@@ -2247,6 +2324,7 @@ GameObject:
   - 225: {fileID: 228777486}
   - 114: {fileID: 228777484}
   - 114: {fileID: 228777485}
+  - 95: {fileID: 228777488}
   m_Layer: 0
   m_Name: ContinentPanel4
   m_TagString: Untagged
@@ -2339,6 +2417,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 228777482}
+--- !u!95 &228777488
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 228777482}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cff8b0dd800c358498b2c2e4018f73a4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &231968273
 Prefab:
   m_ObjectHideFlags: 0
@@ -2842,7 +2937,7 @@ RectTransform:
   - {fileID: 1320856079}
   - {fileID: 45985332}
   m_Father: {fileID: 1668373504}
-  m_RootOrder: 1
+  m_RootOrder: 8
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -2901,6 +2996,7 @@ GameObject:
   - 225: {fileID: 290012628}
   - 114: {fileID: 290012627}
   - 114: {fileID: 290012625}
+  - 95: {fileID: 290012629}
   m_Layer: 0
   m_Name: ContinentPanel1
   m_TagString: Untagged
@@ -2993,6 +3089,23 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!95 &290012629
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 290012623}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cff8b0dd800c358498b2c2e4018f73a4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &306916995
 GameObject:
   m_ObjectHideFlags: 0
@@ -3005,6 +3118,7 @@ GameObject:
   - 225: {fileID: 306916999}
   - 114: {fileID: 306916997}
   - 114: {fileID: 306916998}
+  - 95: {fileID: 306917001}
   m_Layer: 0
   m_Name: ContinentPanel2
   m_TagString: Untagged
@@ -3097,6 +3211,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 306916995}
+--- !u!95 &306917001
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 306916995}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cff8b0dd800c358498b2c2e4018f73a4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &330863800
 GameObject:
   m_ObjectHideFlags: 0
@@ -4168,6 +4299,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1449973600}
+        m_MethodName: Back
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &430320392
@@ -4508,6 +4650,7 @@ GameObject:
   - 225: {fileID: 442572868}
   - 114: {fileID: 442572866}
   - 114: {fileID: 442572867}
+  - 95: {fileID: 442572870}
   m_Layer: 0
   m_Name: ContinentPanel5
   m_TagString: Untagged
@@ -4523,7 +4666,7 @@ RectTransform:
   m_GameObject: {fileID: 442572864}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1961157980}
@@ -4600,6 +4743,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 442572864}
+--- !u!95 &442572870
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 442572864}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cff8b0dd800c358498b2c2e4018f73a4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &445112857
 GameObject:
   m_ObjectHideFlags: 0
@@ -4665,6 +4825,7 @@ MonoBehaviour:
   y: 175
   z: 104
   cloud: {fileID: 499361030}
+  cloud2: {fileID: 1404224737}
   continent: {fileID: 0}
   continentImage: {fileID: 21300000, guid: 41f3087052fe8744d8031dd9bb8608c8, type: 3}
 --- !u!82 &445112861
@@ -4673,10 +4834,10 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 445112857}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5b47283ecd6194347baed44e57414b45, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f0fec9280ea80054699de91b51a9f47c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.7
   m_Pitch: 1
@@ -4799,6 +4960,7 @@ MonoBehaviour:
   - {fileID: 1369714857}
   - {fileID: 502816087}
   isLocked: 1
+  animatorName: ContinentPanel_ZoomIn
 --- !u!1 &446992549
 GameObject:
   m_ObjectHideFlags: 0
@@ -5438,7 +5600,7 @@ ParticleSystem:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 499361028}
   serializedVersion: 2
-  lengthInSec: 5
+  lengthInSec: 4
   startDelay:
     scalar: 0.1
     maxCurve:
@@ -5476,7 +5638,7 @@ ParticleSystem:
     minMaxState: 0
   speed: 1
   randomSeed: 0
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 0
   moveWithTransform: 1
@@ -5812,7 +5974,7 @@ ParticleSystem:
     serializedVersion: 2
     m_Type: 0
     rate:
-      scalar: 30
+      scalar: 200
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -7655,6 +7817,7 @@ MonoBehaviour:
   y: 32.5
   z: 25
   cloud: {fileID: 499361030}
+  cloud2: {fileID: 1404224737}
   continent: {fileID: 0}
   continentImage: {fileID: 0}
 --- !u!82 &574555949
@@ -7663,10 +7826,10 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 574555945}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5b47283ecd6194347baed44e57414b45, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f0fec9280ea80054699de91b51a9f47c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.7
   m_Pitch: 1
@@ -7789,6 +7952,7 @@ MonoBehaviour:
   - {fileID: 1923537707}
   - {fileID: 376543141}
   isLocked: 1
+  animatorName: ContinentPanel2_ZoomIn
 --- !u!1 &599215557
 GameObject:
   m_ObjectHideFlags: 0
@@ -7845,7 +8009,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 818460b5acb816340bb6c895206ed5e7, type: 3}
-    m_FontSize: 0
+    m_FontSize: 76
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -8370,6 +8534,99 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 666220907}
+--- !u!1 &672396807
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 672396811}
+  - 223: {fileID: 672396810}
+  - 114: {fileID: 672396809}
+  - 114: {fileID: 672396808}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &672396808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 672396807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &672396809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 672396807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1980459831, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &672396810
+Canvas:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 672396807}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_RenderMode: 1
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &672396811
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 672396807}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 1175200359}
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &694825345
 GameObject:
   m_ObjectHideFlags: 0
@@ -10079,6 +10336,7 @@ GameObject:
   - 225: {fileID: 904405868}
   - 114: {fileID: 904405866}
   - 114: {fileID: 904405867}
+  - 95: {fileID: 904405870}
   m_Layer: 0
   m_Name: ContinentPanel6
   m_TagString: Untagged
@@ -10171,6 +10429,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 904405864}
+--- !u!95 &904405870
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 904405864}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cff8b0dd800c358498b2c2e4018f73a4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &910105634
 GameObject:
   m_ObjectHideFlags: 0
@@ -10510,7 +10785,7 @@ Light:
   serializedVersion: 6
   m_Type: 2
   m_Color: {r: 0.80784315, g: 0.69411767, b: 0.69411767, a: 1}
-  m_Intensity: 8
+  m_Intensity: 2.5
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -10634,6 +10909,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 2077613432}
         m_MethodName: CheckLockContinents
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1449973600}
+        m_MethodName: Back
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11419,6 +11705,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1449973600}
+        m_MethodName: Back
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1123490910
@@ -11577,6 +11874,74 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1143352859}
+--- !u!1 &1175200358
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1175200359}
+  - 222: {fileID: 1175200361}
+  - 114: {fileID: 1175200360}
+  m_Layer: 5
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1175200359
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1175200358}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 672396811}
+  m_RootOrder: 0
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1175200360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1175200358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1175200361
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1175200358}
 --- !u!1 &1184673654
 GameObject:
   m_ObjectHideFlags: 0
@@ -11678,6 +12043,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 2077613432}
         m_MethodName: CheckLockContinents
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1449973600}
+        m_MethodName: Back
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12237,8 +12613,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 6
   m_Type: 1
-  m_Color: {r: 0.066176474, g: 0.066176474, b: 0.066176474, a: 1}
-  m_Intensity: 2.96
+  m_Color: {r: 0.41176468, g: 0.3905709, b: 0.3905709, a: 1}
+  m_Intensity: 1.5
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -12250,7 +12626,7 @@ Light:
     m_NormalBias: 0.4
     m_NearPlane: 0.2
   m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
+  m_DrawHalo: 1
   m_Flare: {fileID: 0}
   m_RenderMode: 0
   m_CullingMask:
@@ -12267,10 +12643,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1289968181}
-  m_LocalRotation: {x: 0.42966452, y: -0.23180336, z: 0.11512828, w: 0.8651019}
-  m_LocalPosition: {x: 0.76, y: 4.91, z: -1.41}
+  m_LocalRotation: {x: 0.44481534, y: 0.0045995438, z: -0.002284411, w: 0.89560765}
+  m_LocalPosition: {x: 0.76, y: 6.56, z: -1.55}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 52.8238, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 52.8238, y: 0.58849996, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -12478,10 +12854,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1668373505}
-        m_MethodName: Option
+        m_MethodName: CloseOption
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 290012627}
+          m_ObjectArgument: {fileID: 286883177}
           m_ObjectArgumentAssemblyTypeName: Panel, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -12892,6 +13268,7 @@ MonoBehaviour:
   y: 228.5
   z: 185
   cloud: {fileID: 499361030}
+  cloud2: {fileID: 1404224737}
   continent: {fileID: 0}
   continentImage: {fileID: 0}
 --- !u!82 &1396464665
@@ -12900,10 +13277,10 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1396464661}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5b47283ecd6194347baed44e57414b45, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f0fec9280ea80054699de91b51a9f47c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.7
   m_Pitch: 1
@@ -13026,6 +13403,7 @@ MonoBehaviour:
   - {fileID: 1633706508}
   - {fileID: 61794180}
   isLocked: 1
+  animatorName: ContinentPanel3_ZoomIn
 --- !u!1 &1404224734
 GameObject:
   m_ObjectHideFlags: 0
@@ -13106,7 +13484,7 @@ ParticleSystem:
   serializedVersion: 2
   lengthInSec: 2
   startDelay:
-    scalar: 0.1
+    scalar: 0
     maxCurve:
       serializedVersion: 2
       m_Curve:
@@ -13151,7 +13529,7 @@ ParticleSystem:
     serializedVersion: 2
     enabled: 1
     startLifetime:
-      scalar: 2
+      scalar: 1.7
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -13478,7 +13856,7 @@ ParticleSystem:
     serializedVersion: 2
     m_Type: 0
     rate:
-      scalar: 20
+      scalar: 50
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -13512,11 +13890,11 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
       minMaxState: 0
-    cnt0: 30
+    cnt0: 50
     cnt1: 30
     cnt2: 30
     cnt3: 30
-    cntmax0: 30
+    cntmax0: 50
     cntmax1: 30
     cntmax2: 30
     cntmax3: 30
@@ -13524,7 +13902,7 @@ ParticleSystem:
     time1: 0
     time2: 0
     time3: 0
-    m_BurstCount: 0
+    m_BurstCount: 1
   SizeModule:
     enabled: 1
     curve:
@@ -14701,6 +15079,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1449973600}
+        m_MethodName: Back
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1429602909
@@ -14972,6 +15361,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   storyBoards: []
   story: {fileID: 0}
+  backgroundSea: {fileID: 1560867816}
 --- !u!4 &1449973601
 Transform:
   m_ObjectHideFlags: 0
@@ -15016,7 +15406,7 @@ RectTransform:
   m_Children:
   - {fileID: 1143352860}
   m_Father: {fileID: 1668373504}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -15116,6 +15506,7 @@ MonoBehaviour:
   y: 150
   z: 18
   cloud: {fileID: 499361030}
+  cloud2: {fileID: 1404224737}
   continent: {fileID: 0}
   continentImage: {fileID: 0}
 --- !u!82 &1469827327
@@ -15124,10 +15515,10 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1469827323}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5b47283ecd6194347baed44e57414b45, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f0fec9280ea80054699de91b51a9f47c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.7
   m_Pitch: 1
@@ -15250,6 +15641,7 @@ MonoBehaviour:
   - {fileID: 195849285}
   - {fileID: 366721073}
   isLocked: 1
+  animatorName: ContinentPanel4_ZoomIn
 --- !u!1 &1470366651
 GameObject:
   m_ObjectHideFlags: 0
@@ -15521,6 +15913,7 @@ MonoBehaviour:
   y: 347
   z: 342
   cloud: {fileID: 499361030}
+  cloud2: {fileID: 1404224737}
   continent: {fileID: 0}
   continentImage: {fileID: 0}
 --- !u!82 &1476211059
@@ -15529,10 +15922,10 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1476211055}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5b47283ecd6194347baed44e57414b45, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f0fec9280ea80054699de91b51a9f47c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.7
   m_Pitch: 1
@@ -15655,6 +16048,7 @@ MonoBehaviour:
   - {fileID: 1652315849}
   - {fileID: 483260204}
   isLocked: 1
+  animatorName: ContinentPanel6_ZoomIn
 --- !u!1 &1482927773
 GameObject:
   m_ObjectHideFlags: 0
@@ -15694,7 +16088,7 @@ Light:
   serializedVersion: 6
   m_Type: 2
   m_Color: {r: 0.80784315, g: 0.69411767, b: 0.69411767, a: 1}
-  m_Intensity: 8
+  m_Intensity: 2.5
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -15870,7 +16264,7 @@ Light:
   serializedVersion: 6
   m_Type: 2
   m_Color: {r: 0.80784315, g: 0.69411767, b: 0.69411767, a: 1}
-  m_Intensity: 8
+  m_Intensity: 2.5
   m_Range: 9
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -16307,6 +16701,74 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1557355573}
+--- !u!1 &1560867816
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1560867817}
+  - 222: {fileID: 1560867819}
+  - 114: {fileID: 1560867818}
+  m_Layer: 0
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1560867817
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1560867816}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1668373504}
+  m_RootOrder: 0
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1080, y: 1920}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1560867818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1560867816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.21176472, g: 0.5372549, b: 0.6784314, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1560867819
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1560867816}
 --- !u!1 &1561823312
 GameObject:
   m_ObjectHideFlags: 0
@@ -17214,6 +17676,7 @@ GameObject:
   - 114: {fileID: 1668373502}
   - 114: {fileID: 1668373501}
   - 114: {fileID: 1668373505}
+  - 222: {fileID: 1668373507}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -17268,7 +17731,7 @@ Canvas:
   serializedVersion: 2
   m_RenderMode: 1
   m_Camera: {fileID: 217296860}
-  m_PlaneDistance: 57.87
+  m_PlaneDistance: 90
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -17288,14 +17751,15 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 1560867817}
   - {fileID: 1454534248}
-  - {fileID: 286883176}
   - {fileID: 290012624}
   - {fileID: 306916996}
   - {fileID: 2031818394}
   - {fileID: 228777483}
   - {fileID: 442572865}
   - {fileID: 904405865}
+  - {fileID: 286883176}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_AnchorMin: {x: 0, y: 0}
@@ -17315,6 +17779,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentOption: {fileID: 1454534250}
+--- !u!222 &1668373507
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1668373500}
 --- !u!1 &1669237512
 GameObject:
   m_ObjectHideFlags: 0
@@ -17990,6 +18460,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1449973600}
+        m_MethodName: Back
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1777700672
@@ -18450,7 +18931,7 @@ Light:
   serializedVersion: 6
   m_Type: 2
   m_Color: {r: 0.80784315, g: 0.69411767, b: 0.69411767, a: 1}
-  m_Intensity: 8
+  m_Intensity: 2.5
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -18529,7 +19010,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 818460b5acb816340bb6c895206ed5e7, type: 3}
-    m_FontSize: 0
+    m_FontSize: 76
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -19979,7 +20460,7 @@ Light:
   serializedVersion: 6
   m_Type: 2
   m_Color: {r: 0.8088235, g: 0.6958261, b: 0.6958261, a: 1}
-  m_Intensity: 8
+  m_Intensity: 2.5
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -20014,6 +20495,7 @@ GameObject:
   - 225: {fileID: 2031818397}
   - 114: {fileID: 2031818395}
   - 114: {fileID: 2031818396}
+  - 95: {fileID: 2031818399}
   m_Layer: 0
   m_Name: ContinentPanel3
   m_TagString: Untagged
@@ -20106,6 +20588,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2031818393}
+--- !u!95 &2031818399
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2031818393}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cff8b0dd800c358498b2c2e4018f73a4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &2037210231
 GameObject:
   m_ObjectHideFlags: 0
@@ -20327,6 +20826,7 @@ MonoBehaviour:
   - {fileID: 1469827329}
   - {fileID: 20563898}
   - {fileID: 1476211061}
+  backgroundSea: {fileID: 1560867816}
 --- !u!4 &2077613435 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 01861cb6fff245e488d1f154ab15275c, type: 3}
@@ -20342,7 +20842,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ba5fe9aaf81e924d8068f4eddfb1df8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.1
+  speed: 0.025
   spinning: 0
 --- !u!135 &2077613437
 SphereCollider:
@@ -20365,14 +20865,14 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8309f1cb386a1ec44a252af9aefadcae, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ca13bb92eff68c74b8ffa27bf2f756c2, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
-  Priority: 128
+  Priority: 13
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500

@@ -20,10 +20,14 @@ public class City : MonoBehaviour
     private TaskPanel taskPanelScript;
     private Continent continentScript;
 
+    public Image statusImage;
+
     void Start()
     {
         panelMangerScript = planetScript.Canvas.GetComponent<PanelManager>();
         taskPanelScript = planetScript.taskPanel.GetComponent<TaskPanel>();
+
+        statusImage = transform.GetChild(0).GetComponent<Image>();
 
         lastPlanet = PlayerPrefs.GetInt("LastPlanet");
         lastContinent = PlayerPrefs.GetInt("LastContinent");
@@ -57,11 +61,19 @@ public class City : MonoBehaviour
 
         if(isLocked == true)
         {
-            //is locked
+            statusImage.sprite = planetScript.lockedSprite;
         }
         else if(isLocked == false)
         {
-            //is unlocked
+            if (lastExercise == cityNum)
+            {
+                statusImage.sprite = planetScript.unLockedSprite;
+            }
+            else
+            {
+                statusImage.sprite = planetScript.finishedSprite;
+            }
+            
         }
     }
     

@@ -26,6 +26,9 @@ public class Continent : MonoBehaviour
 
     private Planet planetScript;
     private PanelManager panelMangerScript;
+    public ObjectScript objectScript;
+    public Sprite objective;
+    public string objectiveName;
 
     private Vector2 startSize;
     private Vector2 newStartSize;
@@ -147,6 +150,8 @@ public class Continent : MonoBehaviour
         panelMangerScript.Option(levelPanel);
         //StartCoroutine(ScaleUpPanel());
         zoomInPanelAnimator.Play("ContinentPanel5_ZoomIn");
+        objectScript.ChangeImage(objective, objectiveName);
+
     }
 
     public void CheckLockAllCities()

@@ -317,15 +317,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22466426, guid: 2e3559be7f0c38442b74e97f75b366b5, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 22466426, guid: 2e3559be7f0c38442b74e97f75b366b5, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 264
+      value: 324
       objectReference: {fileID: 0}
     - target: {fileID: 22466426, guid: 2e3559be7f0c38442b74e97f75b366b5, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 400
+      value: 354
       objectReference: {fileID: 0}
     - target: {fileID: 11472194, guid: 2e3559be7f0c38442b74e97f75b366b5, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -383,12 +383,12 @@ Prefab:
     - target: {fileID: 11472194, guid: 2e3559be7f0c38442b74e97f75b366b5, type: 2}
       propertyPath: m_SpriteState.m_PressedSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 5c412b323ebc68942a79bd26ecc7da62,
+      objectReference: {fileID: 21300000, guid: 4a02ea2a27ac3b34e94cebb883f6869e,
         type: 3}
     - target: {fileID: 11472194, guid: 2e3559be7f0c38442b74e97f75b366b5, type: 2}
       propertyPath: m_SpriteState.m_HighlightedSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 5c412b323ebc68942a79bd26ecc7da62,
+      objectReference: {fileID: 21300000, guid: 4a02ea2a27ac3b34e94cebb883f6869e,
         type: 3}
     - target: {fileID: 11436062, guid: 2e3559be7f0c38442b74e97f75b366b5, type: 2}
       propertyPath: m_FontData.m_Font
@@ -397,11 +397,11 @@ Prefab:
         type: 3}
     - target: {fileID: 11436062, guid: 2e3559be7f0c38442b74e97f75b366b5, type: 2}
       propertyPath: m_FontData.m_FontSize
-      value: 50
+      value: 72
       objectReference: {fileID: 0}
     - target: {fileID: 11436062, guid: 2e3559be7f0c38442b74e97f75b366b5, type: 2}
       propertyPath: m_FontData.m_MinSize
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11436062, guid: 2e3559be7f0c38442b74e97f75b366b5, type: 2}
       propertyPath: m_FontData.m_MaxSize
@@ -420,6 +420,10 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 638e57dc4e7cf4d4c848ee7f91271a17,
         type: 3}
+    - target: {fileID: 11436062, guid: 2e3559be7f0c38442b74e97f75b366b5, type: 2}
+      propertyPath: m_FontData.m_LineSpacing
+      value: 0.7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2e3559be7f0c38442b74e97f75b366b5, type: 2}
   m_IsPrefabParent: 0
@@ -440,7 +444,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 762648968}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcc2971f2b0b1114b854c3fb5e5e3708, type: 3}
+  m_Script: {fileID: 11500000, guid: 1dec4a41c66bd7c4cb63b38353166635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   IsOpen: 0
@@ -573,10 +577,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1064873578}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcc2971f2b0b1114b854c3fb5e5e3708, type: 3}
+  m_Script: {fileID: 11500000, guid: 1dec4a41c66bd7c4cb63b38353166635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsOpen: 1
+  IsOpen: 0
 --- !u!114 &1064873580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1051,7 +1055,7 @@ Transform:
   m_LocalRotation: {x: 0.40821794, y: -0.23456973, z: 0.109381676, w: 0.87542605}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1

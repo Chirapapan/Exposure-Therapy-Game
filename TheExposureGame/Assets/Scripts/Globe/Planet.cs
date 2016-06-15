@@ -14,6 +14,10 @@ public class Planet : MonoBehaviour
     public Continent[] continents;
 
     public GameObject backgroundSea;
+
+    public Sprite lockedSprite;
+    public Sprite unLockedSprite;
+    public Sprite finishedSprite;
    
     public void CheckLockContinents()
     {

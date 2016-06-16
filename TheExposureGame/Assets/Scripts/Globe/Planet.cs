@@ -18,6 +18,12 @@ public class Planet : MonoBehaviour
     public Sprite lockedSprite;
     public Sprite unLockedSprite;
     public Sprite finishedSprite;
+    public GameObject continentCanvas;
+
+    void Start()
+    {
+        continentCanvas.SetActive(false);
+    }
    
     public void CheckLockContinents()
     {

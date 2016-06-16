@@ -13,6 +13,7 @@ public class City : MonoBehaviour
     private int lastPlanet;
     private int lastContinent;
     private int lastExercise;
+    private string noHint = "??????";
 
     private int amountOfExercises;
 
@@ -22,6 +23,7 @@ public class City : MonoBehaviour
     private PanelManager panelMangerScript;
     private TaskPanel taskPanelScript;
     private Continent continentScript;
+    private bool showHint;
 
     public Image statusImage;
 
@@ -34,6 +36,7 @@ public class City : MonoBehaviour
 
         lastPlanet = PlayerPrefs.GetInt("LastPlanet");
         lastContinent = PlayerPrefs.GetInt("LastContinent");
+
 
         amountOfExercises = PlayerPrefs.GetInt("Amount" + planetNum + "-" + continentNum);
     }
@@ -81,10 +84,12 @@ public class City : MonoBehaviour
             else if(lastExercise == 0 && lastContinent > continentNum)
             {
                 statusImage.sprite = planetScript.finishedSprite;
+                showHint = true;
             }
             else
             {
                 statusImage.sprite = planetScript.finishedSprite;
+                showHint = true;
             }
             
         }
@@ -96,8 +101,18 @@ public class City : MonoBehaviour
         {
             panelMangerScript.OverlayOption(planetScript.taskPanel);
             taskPanelScript.SetDescription(planetNum, continentNum, cityNum);
+            if(showHint == false)
+            {
+                taskPanelScript.SetHint(noHint);
+            }
+           else
+            {
+                taskPanelScript.SetHint(hint);
+            }
+
             planetScript.doneButton.onClick.AddListener(() => FinishExercise());
-            taskPanelScript.SetHint(hint);
+
+            
         }
     }
 
@@ -107,7 +122,9 @@ public class City : MonoBehaviour
         PlayerPrefs.SetInt("LastContinent", continentNum);
         PlayerPrefs.SetInt("lastExercise", cityNum + 1);
         continentScript.CheckLockAllCities();
-        if(cityNum == (amountOfExercises -1))
+        showHint = true;
+        taskPanelScript.SetHint(hint);
+        if (cityNum == (amountOfExercises -1))
         {
             PlayerPrefs.SetInt("lastExercise", 0);
             PlayerPrefs.SetInt("LastContinent", continentNum + 1);

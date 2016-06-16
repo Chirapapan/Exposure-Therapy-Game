@@ -143,6 +143,7 @@ public class Continent : MonoBehaviour
     public void GoToLevel()
     {
         //ScaleDownPanel();
+        planetScript.continentCanvas.SetActive(true);
         planetScript.TurnOnSea();
         InitBaseCities();
         ShowOtherCities();
@@ -151,7 +152,6 @@ public class Continent : MonoBehaviour
         //StartCoroutine(ScaleUpPanel());
         zoomInPanelAnimator.Play("ContinentPanel5_ZoomIn");
         objectScript.ChangeImage(objective, objectiveName);
-
     }
 
     public void CheckLockAllCities()

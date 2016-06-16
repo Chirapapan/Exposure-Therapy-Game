@@ -412,6 +412,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -525,17 +526,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1668373505}
-        m_MethodName: CloseOption
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 286883177}
-          m_ObjectArgumentAssemblyTypeName: Panel, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 2077613432}
         m_MethodName: RemoveListenersOnButton
         m_Mode: 1
@@ -634,6 +624,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -910,6 +901,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -1757,6 +1749,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -1965,6 +1958,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -2094,6 +2088,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -2683,6 +2678,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -2940,6 +2936,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -3122,6 +3119,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -3313,6 +3311,7 @@ RectTransform:
   - {fileID: 2126153910}
   - {fileID: 1320856079}
   - {fileID: 45985332}
+  - {fileID: 892502496}
   m_Father: {fileID: 1668373504}
   m_RootOrder: 7
   m_AnchorMin: {x: 0, y: 0}
@@ -3361,6 +3360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   taskDescription: {fileID: 2126153911}
+  hintDescription: {fileID: 892502497}
 --- !u!1 &290012623
 GameObject:
   m_ObjectHideFlags: 0
@@ -3986,6 +3986,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -4074,6 +4075,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -4756,6 +4758,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -4844,6 +4847,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -5567,6 +5571,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -5850,6 +5855,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -5938,6 +5944,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -7692,6 +7699,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -8397,6 +8405,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -8864,6 +8873,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: Dark power is kept inside a medallion.
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -8958,6 +8968,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -9700,6 +9711,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: Click to destroy the object.
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -9882,6 +9894,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -10333,6 +10346,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -10755,6 +10769,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: To able to see the sun again, the medallion need to be destroyed
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -11777,6 +11792,80 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 884025248}
+--- !u!1 &892502495
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 892502496}
+  - 222: {fileID: 892502498}
+  - 114: {fileID: 892502497}
+  m_Layer: 0
+  m_Name: Hint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &892502496
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 892502495}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 286883176}
+  m_RootOrder: 4
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -5, y: -101}
+  m_SizeDelta: {x: 914, y: 435}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &892502497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 892502495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 818460b5acb816340bb6c895206ed5e7, type: 3}
+    m_FontSize: 60
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 300
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: The Task
+--- !u!222 &892502498
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 892502495}
 --- !u!1 &904405864
 GameObject:
   m_ObjectHideFlags: 0
@@ -12191,6 +12280,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: Click to destroy the object.
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -12313,6 +12403,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -12562,6 +12653,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: Click to destroy the object.
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -13030,6 +13122,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -13117,6 +13210,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -13436,6 +13530,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1668373500}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1123490910
@@ -13564,16 +13669,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1143352859}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -45}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1278185560}
   m_Father: {fileID: 1454534248}
   m_RootOrder: 0
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -474, y: 258}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 4, y: 273}
   m_SizeDelta: {x: 354, y: 127}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1143352861
@@ -13781,6 +13886,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -14361,6 +14467,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -14421,6 +14528,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -14543,6 +14651,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -14972,6 +15081,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -15060,6 +15170,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -17330,6 +17441,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -17556,7 +17668,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1454534247}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -40.438084}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.27370322, y: 0.27370322, z: 0.27370322}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -17921,6 +18033,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -18707,6 +18820,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -19037,6 +19151,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -19707,6 +19822,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -19915,6 +20031,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -20044,6 +20161,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -20200,6 +20318,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -20410,6 +20529,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -20739,6 +20859,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -21192,6 +21313,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -21509,6 +21631,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -21691,6 +21814,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -21915,6 +22039,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -22002,6 +22127,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -22602,6 +22728,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: Click to destroy the object.
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -22663,6 +22790,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -22887,6 +23015,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -22975,6 +23104,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -23063,6 +23193,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -23218,6 +23349,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -23414,6 +23546,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: Click to destroy the object.
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -23474,6 +23607,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: Click to destroy the object.
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -23535,6 +23669,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -24230,6 +24365,7 @@ MonoBehaviour:
   lockedSprite: {fileID: 21300000, guid: a7dc1f48fe986424c839921f8b8881a5, type: 3}
   unLockedSprite: {fileID: 21300000, guid: 924c7be4e8ba50e409e4fae97fe41a0e, type: 3}
   finishedSprite: {fileID: 21300000, guid: c8e619a2da244f946a0240b981d67bf2, type: 3}
+  continentCanvas: {fileID: 1668373500}
 --- !u!4 &2077613435 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 01861cb6fff245e488d1f154ab15275c, type: 3}
@@ -24384,6 +24520,7 @@ MonoBehaviour:
   planetNum: 0
   continentNum: 0
   cityNum: 0
+  hint: 
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
@@ -24587,7 +24724,7 @@ GameObject:
   - 222: {fileID: 2126153912}
   - 114: {fileID: 2126153911}
   m_Layer: 0
-  m_Name: Text
+  m_Name: Exercise
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24608,8 +24745,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -8, y: 60}
-  m_SizeDelta: {x: 747, y: 828}
+  m_AnchoredPosition: {x: -5, y: 362}
+  m_SizeDelta: {x: 914, y: 434}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2126153911
 MonoBehaviour:

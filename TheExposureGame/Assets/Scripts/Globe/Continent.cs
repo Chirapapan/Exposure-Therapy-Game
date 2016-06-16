@@ -35,6 +35,7 @@ public class Continent : MonoBehaviour
     private Vector2 size;
    private Animator zoomInPanelAnimator;
     public string animatorName;
+    public bool cityClick;
 
     // Use this for initialization
     void Start()
@@ -151,6 +152,7 @@ public class Continent : MonoBehaviour
         panelMangerScript.Option(levelPanel);
         //StartCoroutine(ScaleUpPanel());
         zoomInPanelAnimator.Play("ContinentPanel5_ZoomIn");
+       
         objectScript.ChangeImage(objective, objectiveName);
     }
 
@@ -174,30 +176,5 @@ public class Continent : MonoBehaviour
         newStartSize.y = startSize.y / scaleValue;
         levelPanel.GetComponent<RectTransform>().sizeDelta = newStartSize;
     }
-
-
-    IEnumerator ScaleUpPanel()
-    {
-        //yield return new WaitForSeconds(2);
-        //for (float i = newStartSize.x; i < startSize.x;)
-        //{
-        //    yield return new WaitForSeconds(1f);
-        //    Debug.Log(i);
-        //    newStartSize.x ++;
-        //    newStartSize.y ++;
-
-        //    levelPanel.GetComponent<RectTransform>().sizeDelta = newStartSize;
-            
-        //}
-        //if (newStartSize.x <= startSize.x && newStartSize.y <= startSize.y)
-        //{
-        //    Debug.Log(newStartSize.x < startSize.x);
-        //    newStartSize.x = ++;
-        //    newStartSize.y = newStartSize.y++;
-        //    levelPanel.GetComponent<RectTransform>().sizeDelta = newStartSize;
-            yield return new WaitForSeconds(5f);
-
-       
-        //}
-    }
+    
 }

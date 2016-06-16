@@ -97,23 +97,26 @@ public class City : MonoBehaviour
     
     public void OnPress()
     {
-        if (isLocked == false)
+        if (continentScript.cityClick == false)
         {
-            panelMangerScript.OverlayOption(planetScript.taskPanel);
-            taskPanelScript.SetDescription(planetNum, continentNum, cityNum);
-            if(showHint == false)
+            if (isLocked == false)
             {
-                taskPanelScript.SetHint(noHint);
-            }
-           else
-            {
-                taskPanelScript.SetHint(hint);
-            }
+                panelMangerScript.OverlayOption(planetScript.taskPanel);
+                taskPanelScript.SetDescription(planetNum, continentNum, cityNum);
+                if (showHint == false)
+                {
+                    taskPanelScript.SetHint(noHint);
+                }
+                else
+                {
+                    taskPanelScript.SetHint(hint);
+                }
 
-            planetScript.doneButton.onClick.AddListener(() => FinishExercise());
+                planetScript.doneButton.onClick.AddListener(() => FinishExercise());
 
-            
+            }
         }
+        
     }
 
     void FinishExercise()

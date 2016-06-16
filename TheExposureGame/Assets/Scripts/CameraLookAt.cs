@@ -36,9 +36,7 @@ public class CameraLookAt : MonoBehaviour
     void Start()
     {
         camera = Camera.main.GetComponent<Transform>();
-        rotate = GetComponent<Rotate>();
         zoomInAudio = Camera.main.GetComponent<AudioSource>();
-        //cloud = ParticleSystem.FindObjectOfType<ParticleSystem>();
 
         continentScript = transform.GetComponent<Continent>();
     }
@@ -72,6 +70,7 @@ public class CameraLookAt : MonoBehaviour
             if (camera.transform.position.z > -5)
             {
                 zoomingIn = false;
+                Rotate.spinning = false;
                 continentScript.GoToLevel();
                 cloud.Clear(); //has to be replaced to be slowly fade out, preferbly from the center
                 cloud.Stop();
@@ -103,7 +102,7 @@ public class CameraLookAt : MonoBehaviour
             else if(oneClick == true && continentScript.isLocked == false)
             {
                 rotating = true;
-                //rotate.spinning = false;
+                Rotate.spinning = true;
             }
 
         }

@@ -356,6 +356,7 @@ MonoBehaviour:
   objective: {fileID: 0}
   objectiveName: A Ring
   animatorName: ContinentPanel5_ZoomIn
+  cityClick: 0
 --- !u!4 &22409935 stripped
 Transform:
   m_PrefabParentObject: {fileID: 438094, guid: b48ae7333a877e14ebb42fc8a013476b, type: 2}
@@ -5327,9 +5328,10 @@ MonoBehaviour:
   - {fileID: 502816087}
   isLocked: 1
   objectScript: {fileID: 1325189150}
-  objective: {fileID: 0}
+  objective: {fileID: 21300000, guid: 357d6d86790982a42a1510318d7d1a8a, type: 3}
   objectiveName: Mediallion
   animatorName: ContinentPanel_ZoomIn
+  cityClick: 0
 --- !u!1 &446992549
 GameObject:
   m_ObjectHideFlags: 0
@@ -8677,9 +8679,10 @@ MonoBehaviour:
   - {fileID: 366721073}
   isLocked: 1
   objectScript: {fileID: 1325189150}
-  objective: {fileID: 0}
+  objective: {fileID: 21300000, guid: 55d6a95c15fe2494aade7c42283c9df0, type: 3}
   objectiveName: Book of Magic
   animatorName: ContinentPanel2_ZoomIn
+  cityClick: 0
 --- !u!1 &585179428
 GameObject:
   m_ObjectHideFlags: 0
@@ -15564,9 +15567,10 @@ MonoBehaviour:
   - {fileID: 376543141}
   isLocked: 1
   objectScript: {fileID: 1325189150}
-  objective: {fileID: 0}
+  objective: {fileID: 21300000, guid: 38fc489da4ef1c54b8eba174dd76095a, type: 3}
   objectiveName: Plague Doctors Mask
   animatorName: ContinentPanel3_ZoomIn
+  cityClick: 0
 --- !u!1 &1404224734
 GameObject:
   m_ObjectHideFlags: 0
@@ -17981,6 +17985,7 @@ MonoBehaviour:
   objective: {fileID: 0}
   objectiveName: Scrolls of Waepons
   animatorName: ContinentPanel4_ZoomIn
+  cityClick: 0
 --- !u!1 &1470366651
 GameObject:
   m_ObjectHideFlags: 0
@@ -18394,6 +18399,7 @@ MonoBehaviour:
   objective: {fileID: 0}
   objectiveName: Harlequin Hat
   animatorName: ContinentPanel6_ZoomIn
+  cityClick: 0
 --- !u!1 &1482927773
 GameObject:
   m_ObjectHideFlags: 0
@@ -24382,7 +24388,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.025
-  spinning: 0
 --- !u!135 &2077613437
 SphereCollider:
   m_ObjectHideFlags: 0

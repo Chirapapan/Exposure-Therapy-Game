@@ -6,6 +6,7 @@ public class TaskPanel : MonoBehaviour
 {
 
     public Text taskDescription;
+    public Text hintDescription;
 
     // Use this for initialization
     void Start()
@@ -17,6 +18,11 @@ public class TaskPanel : MonoBehaviour
     void Update()
     {
 
+    }
+
+    public void SetHint(string hint)
+    {
+        hintDescription.text = hint;
     }
 
     public void SetDescription(int planetNum, int weekNum, int cityNum)

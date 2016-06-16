@@ -8,6 +8,7 @@ public class City : MonoBehaviour
     public int planetNum;
     public int continentNum;
     public int cityNum;
+    public string hint;
 
     private int lastPlanet;
     private int lastContinent;
@@ -96,6 +97,7 @@ public class City : MonoBehaviour
             panelMangerScript.OverlayOption(planetScript.taskPanel);
             taskPanelScript.SetDescription(planetNum, continentNum, cityNum);
             planetScript.doneButton.onClick.AddListener(() => FinishExercise());
+            taskPanelScript.SetHint(hint);
         }
     }
 

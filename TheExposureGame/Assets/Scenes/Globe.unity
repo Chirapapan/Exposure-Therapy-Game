@@ -951,7 +951,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -42}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &95102028
@@ -2700,7 +2700,7 @@ GameObject:
   - 114: {fileID: 228777485}
   - 95: {fileID: 228777488}
   m_Layer: 0
-  m_Name: ContinentPanel4
+  m_Name: ContinentPanel2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2728,7 +2728,7 @@ RectTransform:
   - {fileID: 195849284}
   - {fileID: 366721072}
   m_Father: {fileID: 1668373504}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -3496,7 +3496,7 @@ GameObject:
   - 114: {fileID: 306916998}
   - 95: {fileID: 306917001}
   m_Layer: 0
-  m_Name: ContinentPanel2
+  m_Name: ContinentPanel3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3524,7 +3524,7 @@ RectTransform:
   - {fileID: 1923537706}
   - {fileID: 376543140}
   m_Father: {fileID: 1668373504}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -8087,7 +8087,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 5, y: -37}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &544588478
@@ -8652,20 +8652,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planetNum: 0
   continentNum: 1
-  levelPanel: {fileID: 306916997}
+  levelPanel: {fileID: 228777484}
   scaleValue: 1.5
   baseCities:
-  - {fileID: 926573722}
-  - {fileID: 1110913025}
-  - {fileID: 952136756}
-  - {fileID: 1835302110}
+  - {fileID: 700057750}
+  - {fileID: 1639746342}
+  - {fileID: 259521506}
+  - {fileID: 1301534679}
   otherCities:
-  - {fileID: 1099832058}
-  - {fileID: 1526532313}
-  - {fileID: 1928140247}
-  - {fileID: 1832961643}
-  - {fileID: 1923537707}
-  - {fileID: 376543141}
+  - {fileID: 1931129914}
+  - {fileID: 774430236}
+  - {fileID: 1889610230}
+  - {fileID: 441508154}
+  - {fileID: 195849285}
+  - {fileID: 366721073}
   isLocked: 1
   objectScript: {fileID: 1325189150}
   objective: {fileID: 0}
@@ -10527,7 +10527,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 01861cb6fff245e488d1f154ab15275c, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 01861cb6fff245e488d1f154ab15275c, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -13890,7 +13890,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -40}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1241671100
@@ -14200,7 +14200,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -27}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1273122960
@@ -14800,7 +14800,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1325189146
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15437,20 +15437,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planetNum: 0
   continentNum: 2
-  levelPanel: {fileID: 2031818395}
+  levelPanel: {fileID: 306916997}
   scaleValue: 1.5
   baseCities:
-  - {fileID: 1000277660}
-  - {fileID: 1289577329}
-  - {fileID: 181432049}
-  - {fileID: 1784629856}
+  - {fileID: 926573722}
+  - {fileID: 1110913025}
+  - {fileID: 952136756}
+  - {fileID: 1835302110}
   otherCities:
-  - {fileID: 1810462838}
-  - {fileID: 463767176}
-  - {fileID: 1557355575}
-  - {fileID: 164746959}
-  - {fileID: 1633706508}
-  - {fileID: 61794180}
+  - {fileID: 1099832058}
+  - {fileID: 1526532313}
+  - {fileID: 1928140247}
+  - {fileID: 1832961643}
+  - {fileID: 1923537707}
+  - {fileID: 376543141}
   isLocked: 1
   objectScript: {fileID: 1325189150}
   objective: {fileID: 0}
@@ -17629,7 +17629,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -48}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1458975188
@@ -17850,20 +17850,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planetNum: 0
   continentNum: 3
-  levelPanel: {fileID: 228777484}
+  levelPanel: {fileID: 2031818395}
   scaleValue: 1.5
   baseCities:
-  - {fileID: 700057750}
-  - {fileID: 1639746342}
-  - {fileID: 259521506}
-  - {fileID: 1301534679}
+  - {fileID: 1000277660}
+  - {fileID: 1289577329}
+  - {fileID: 181432049}
+  - {fileID: 1784629856}
   otherCities:
-  - {fileID: 1931129914}
-  - {fileID: 774430236}
-  - {fileID: 1889610230}
-  - {fileID: 441508154}
-  - {fileID: 195849285}
-  - {fileID: 366721073}
+  - {fileID: 1810462838}
+  - {fileID: 463767176}
+  - {fileID: 1557355575}
+  - {fileID: 164746959}
+  - {fileID: 1633706508}
+  - {fileID: 61794180}
   isLocked: 1
   objectScript: {fileID: 1325189150}
   objective: {fileID: 0}
@@ -20325,9 +20325,9 @@ RectTransform:
   m_Children:
   - {fileID: 1560867817}
   - {fileID: 290012624}
+  - {fileID: 228777483}
   - {fileID: 306916996}
   - {fileID: 2031818394}
-  - {fileID: 228777483}
   - {fileID: 442572865}
   - {fileID: 904405865}
   - {fileID: 286883176}
@@ -22731,7 +22731,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -48}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1911398514
@@ -23647,7 +23647,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1832961643}
-        m_MethodName: CancelInvoke
+        m_MethodName: OnPress
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -23904,7 +23904,7 @@ GameObject:
   - 114: {fileID: 2031818396}
   - 95: {fileID: 2031818399}
   m_Layer: 0
-  m_Name: ContinentPanel3
+  m_Name: ContinentPanel4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23932,7 +23932,7 @@ RectTransform:
   - {fileID: 1633706507}
   - {fileID: 61794179}
   m_Father: {fileID: 1668373504}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -24227,9 +24227,9 @@ MonoBehaviour:
   - {fileID: 20563898}
   - {fileID: 1476211061}
   backgroundSea: {fileID: 1560867816}
-  lockedSprite: {fileID: 21300000, guid: e91853b9ed8ebf0468ff558852652896, type: 3}
-  unLockedSprite: {fileID: 21300000, guid: 3395f63415059df4c9f7e9fd7099e1c3, type: 3}
-  finishedSprite: {fileID: 21300000, guid: 4f0027ba0c5d70840b60d63395dd4065, type: 3}
+  lockedSprite: {fileID: 21300000, guid: a7dc1f48fe986424c839921f8b8881a5, type: 3}
+  unLockedSprite: {fileID: 21300000, guid: 924c7be4e8ba50e409e4fae97fe41a0e, type: 3}
+  finishedSprite: {fileID: 21300000, guid: c8e619a2da244f946a0240b981d67bf2, type: 3}
 --- !u!4 &2077613435 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 01861cb6fff245e488d1f154ab15275c, type: 3}
@@ -24632,7 +24632,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 818460b5acb816340bb6c895206ed5e7, type: 3}
-    m_FontSize: 100
+    m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1

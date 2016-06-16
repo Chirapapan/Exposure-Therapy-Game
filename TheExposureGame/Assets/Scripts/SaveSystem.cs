@@ -117,7 +117,7 @@ public class SaveSystem : MonoBehaviour
             for (int j = 0; j < 4; j++)
             {
                 GameObject week = (GameObject)Instantiate(weeks);
-                week.transform.SetParent(content, false);
+                //week.transform.SetParent(content, false);
                 RectTransform rect = week.GetComponent<RectTransform>();
                 rect.localPosition = new Vector3(weekX, WeekY, 0);
                 weekCount++;
@@ -158,11 +158,7 @@ public class SaveSystem : MonoBehaviour
             PlayerPrefs.SetString("Exercise" + planetNum + "-" + weekNum + "-" + i , inputFields[i].GetComponent<Text>().text);
         }
         PlayerPrefs.SetInt("Amount" + planetNum + "-" + weekNum, inputFields.Count);
-        for(int j = 0; j < inputFields.Count; j++)
-        {
-            Destroy( inputFields[j]);
-        }
-        inputFields.Clear();
+        OnBack();
     }
 
     public void OnBack()

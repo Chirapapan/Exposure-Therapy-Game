@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour {
     void Start()
     {
         cameraStartPos = Camera.main.transform.position;
+        ShowPlayerprefs();
     }
     public void NextStorySprite()
     {
@@ -61,5 +62,20 @@ public class GameManager : MonoBehaviour {
     public void TurnOffSea()
     {
         backgroundSea.SetActive(false);
+    }
+
+    /// <summary>
+    /// resets all the players player prefs of the game very dangerous
+    /// </summary>
+    public void ResetAllPlayerprefs()
+    {
+        PlayerPrefs.DeleteAll();
+    }
+
+    public void ShowPlayerprefs()
+    {
+        Debug.Log( PlayerPrefs.GetInt("LastPlanet"));
+        Debug.Log(PlayerPrefs.GetInt("LastContinent"));
+        Debug.Log(PlayerPrefs.GetInt("lastExercise"));
     }
 }

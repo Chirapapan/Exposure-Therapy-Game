@@ -68,10 +68,9 @@ public class Continent : MonoBehaviour
             isLocked = false;
         }
 
-        if (lastContinent >= continentNum && amountOfExercises == lastExercise)
+        if (lastContinent >= continentNum && amountOfExercises == lastExercise && lastContinent != 0)
         {
             ps.Play();
-            PlayerPrefs.SetInt("LastContinent", continentNum + 1);
         }
 
         if (lastPlanet >= planetNum && isLocked == true && lastPlanet != 0)
@@ -131,6 +130,7 @@ public class Continent : MonoBehaviour
             for(int i = 0; i < amount; i ++)
             {
                 otherCities[i].gameObject.SetActive(true);
+                otherCities[i].continentNum = continentNum;
                 otherCities[i].planetNum = planetNum;
                 otherCities[i].cityNum = i + 3;
             }

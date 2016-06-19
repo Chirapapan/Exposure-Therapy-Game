@@ -351,12 +351,22 @@ MonoBehaviour:
   - {fileID: 1669237514}
   - {fileID: 723964599}
   - {fileID: 1662414082}
+  objectStates:
+  - {fileID: 21300000, guid: f0083ee834514ac46a06f3b0f5467e2b, type: 3}
+  - {fileID: 21300000, guid: 856793102e092824ea79828de379bfd1, type: 3}
+  - {fileID: 21300000, guid: 05a70f7ede79444448c1fdf377a2a650, type: 3}
+  - {fileID: 21300000, guid: db58bb023cb746b47b81434f26ac42d1, type: 3}
+  - {fileID: 21300000, guid: 6c2dcafe8d33f214595d226120a6f1ff, type: 3}
   isLocked: 1
   objectScript: {fileID: 1325189150}
-  objective: {fileID: 0}
+  objective: {fileID: 21300000, guid: bca2790e6c43e024bb951509d483bbd7, type: 3}
+  doneObject: {fileID: 21300000, guid: f0083ee834514ac46a06f3b0f5467e2b, type: 3}
   objectiveName: A Ring
   animatorName: ContinentPanel5_ZoomIn
   cityClick: 0
+  numberSprite: 5
+  saveNumberSprite: _5
+  destroyedObject: 0
 --- !u!4 &22409935 stripped
 Transform:
   m_PrefabParentObject: {fileID: 438094, guid: b48ae7333a877e14ebb42fc8a013476b, type: 2}
@@ -5326,12 +5336,22 @@ MonoBehaviour:
   - {fileID: 631425579}
   - {fileID: 1369714857}
   - {fileID: 502816087}
+  objectStates:
+  - {fileID: 21300000, guid: df96a259e40b3404890d67728ae2cdb2, type: 3}
+  - {fileID: 21300000, guid: 8281cdd81b16fca4497e385a6bf8368c, type: 3}
+  - {fileID: 21300000, guid: b6827c0ec0bdadd4181c49f0443f8d80, type: 3}
+  - {fileID: 21300000, guid: ffa2fcc301716fc459dbc288d166f76f, type: 3}
+  - {fileID: 21300000, guid: 9113fab322430cb408716f406df223b3, type: 3}
   isLocked: 1
   objectScript: {fileID: 1325189150}
-  objective: {fileID: 21300000, guid: 357d6d86790982a42a1510318d7d1a8a, type: 3}
+  objective: {fileID: 21300000, guid: dd38c3b45dab220459ae7c76acef48cb, type: 3}
+  doneObject: {fileID: 21300000, guid: df96a259e40b3404890d67728ae2cdb2, type: 3}
   objectiveName: Mediallion
   animatorName: ContinentPanel_ZoomIn
   cityClick: 0
+  numberSprite: 5
+  saveNumberSprite: _1
+  destroyedObject: 0
 --- !u!1 &446992549
 GameObject:
   m_ObjectHideFlags: 0
@@ -8677,12 +8697,22 @@ MonoBehaviour:
   - {fileID: 441508154}
   - {fileID: 195849285}
   - {fileID: 366721073}
+  objectStates:
+  - {fileID: 21300000, guid: bff087932d9ca2c46b351a701ad1977f, type: 3}
+  - {fileID: 21300000, guid: 33739b07a389aae4a98750de14fb8eb9, type: 3}
+  - {fileID: 21300000, guid: fc9c0e81354ca4c4c9c46dc63989a2d9, type: 3}
+  - {fileID: 21300000, guid: 369d9a55242dae844bedb194c9f0e3f9, type: 3}
+  - {fileID: 21300000, guid: 8f69ec5bbe795ac48bfed4136a281584, type: 3}
   isLocked: 1
   objectScript: {fileID: 1325189150}
-  objective: {fileID: 21300000, guid: 55d6a95c15fe2494aade7c42283c9df0, type: 3}
+  objective: {fileID: 21300000, guid: d2bbd19bc53b54c46bf38e9682a1be2b, type: 3}
+  doneObject: {fileID: 21300000, guid: bff087932d9ca2c46b351a701ad1977f, type: 3}
   objectiveName: Book of Magic
   animatorName: ContinentPanel2_ZoomIn
   cityClick: 0
+  numberSprite: 5
+  saveNumberSprite: _2
+  destroyedObject: 0
 --- !u!1 &585179428
 GameObject:
   m_ObjectHideFlags: 0
@@ -13446,7 +13476,7 @@ RectTransform:
   m_RootOrder: 8
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -499.6745, y: 90.578896}
+  m_AnchoredPosition: {x: -540, y: 80}
   m_SizeDelta: {x: 354, y: 127}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1123490909
@@ -14928,6 +14958,7 @@ RectTransform:
   - {fileID: 2012495741}
   - {fileID: 1854419292}
   - {fileID: 1079304791}
+  - {fileID: 1371021581}
   m_Father: {fileID: 1668373504}
   m_RootOrder: 9
   m_AnchorMin: {x: 0, y: 0}
@@ -14999,6 +15030,9 @@ MonoBehaviour:
   isOpen: 0
   objective: {fileID: 2012495742}
   objectiveName: {fileID: 1854419293}
+  toDo: {fileID: 1079304792}
+  clickToDestroy: {fileID: 2012495744}
+  done: {fileID: 1371021580}
 --- !u!1 &1369714853
 GameObject:
   m_ObjectHideFlags: 0
@@ -15088,6 +15122,74 @@ MonoBehaviour:
   isLocked: 1
   planetScript: {fileID: 2077613432}
   statusImage: {fileID: 0}
+--- !u!1 &1371021580
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1371021581}
+  - 222: {fileID: 1371021583}
+  - 114: {fileID: 1371021582}
+  m_Layer: 0
+  m_Name: Image (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1371021581
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1371021580}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1325189146}
+  m_RootOrder: 4
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 14.00021, y: 277}
+  m_SizeDelta: {x: 800, y: 800}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1371021582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1371021580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 25ea5c8aab4ced446aa215e6399bf6ab, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1371021583
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1371021580}
 --- !u!1 &1381501869
 GameObject:
   m_ObjectHideFlags: 0
@@ -15565,12 +15667,22 @@ MonoBehaviour:
   - {fileID: 1832961643}
   - {fileID: 1923537707}
   - {fileID: 376543141}
+  objectStates:
+  - {fileID: 21300000, guid: 53598335a95a6c347a142ebde3eefc6f, type: 3}
+  - {fileID: 21300000, guid: 2e8402549b593124684d240bac72d4cb, type: 3}
+  - {fileID: 21300000, guid: 01c5f11464d1b90479d8687eadf9b09f, type: 3}
+  - {fileID: 21300000, guid: 75836f669664e824cbd15c9473138c44, type: 3}
+  - {fileID: 21300000, guid: fca818f2561c55f4f8e595a0c467ef62, type: 3}
   isLocked: 1
   objectScript: {fileID: 1325189150}
-  objective: {fileID: 21300000, guid: 38fc489da4ef1c54b8eba174dd76095a, type: 3}
+  objective: {fileID: 21300000, guid: 632770207112d0a48a57a5e7c7e11789, type: 3}
+  doneObject: {fileID: 21300000, guid: 53598335a95a6c347a142ebde3eefc6f, type: 3}
   objectiveName: Plague Doctors Mask
   animatorName: ContinentPanel3_ZoomIn
   cityClick: 0
+  numberSprite: 5
+  saveNumberSprite: _3
+  destroyedObject: 0
 --- !u!1 &1404224734
 GameObject:
   m_ObjectHideFlags: 0
@@ -17237,8 +17349,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 177, y: 109}
+  m_AnchoredPosition: {x: 0, y: 22}
+  m_SizeDelta: {x: 177, y: 152}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1433433794
 MonoBehaviour:
@@ -17980,12 +18092,22 @@ MonoBehaviour:
   - {fileID: 164746959}
   - {fileID: 1633706508}
   - {fileID: 61794180}
+  objectStates:
+  - {fileID: 21300000, guid: ab5517537fb68874e83a208552015750, type: 3}
+  - {fileID: 21300000, guid: 80850da94d18e8347b052cae85cc6713, type: 3}
+  - {fileID: 21300000, guid: ac6187060aa1efd4aac8a38b5b6e7973, type: 3}
+  - {fileID: 21300000, guid: 17686fe6344fd87448d01cb894f1bbca, type: 3}
+  - {fileID: 21300000, guid: db88e029a88f8284bb1e399bb8da5752, type: 3}
   isLocked: 1
   objectScript: {fileID: 1325189150}
-  objective: {fileID: 0}
+  objective: {fileID: 21300000, guid: 127683a8879c22040992db69fc4ee5c1, type: 3}
+  doneObject: {fileID: 21300000, guid: ab5517537fb68874e83a208552015750, type: 3}
   objectiveName: Scrolls of Waepons
   animatorName: ContinentPanel4_ZoomIn
   cityClick: 0
+  numberSprite: 5
+  saveNumberSprite: _4
+  destroyedObject: 0
 --- !u!1 &1470366651
 GameObject:
   m_ObjectHideFlags: 0
@@ -18394,12 +18516,22 @@ MonoBehaviour:
   - {fileID: 279956039}
   - {fileID: 1652315849}
   - {fileID: 483260204}
+  objectStates:
+  - {fileID: 21300000, guid: 17d69d8b890ec364c9386edc08e32f5a, type: 3}
+  - {fileID: 21300000, guid: e9f5a70bbf228464fb83357ae8633f62, type: 3}
+  - {fileID: 21300000, guid: 36df6f77baae37947a9ecf079760942e, type: 3}
+  - {fileID: 21300000, guid: 5350c92e006549e46ad8a3f0db0e9f38, type: 3}
+  - {fileID: 21300000, guid: ec516c9d61dd2ac41b035301cd34c038, type: 3}
   isLocked: 1
   objectScript: {fileID: 1325189150}
-  objective: {fileID: 0}
+  objective: {fileID: 21300000, guid: 474108e31a9a87d448f887b9d65d6d78, type: 3}
+  doneObject: {fileID: 21300000, guid: 17d69d8b890ec364c9386edc08e32f5a, type: 3}
   objectiveName: Harlequin Hat
   animatorName: ContinentPanel6_ZoomIn
   cityClick: 0
+  numberSprite: 5
+  saveNumberSprite: _6
+  destroyedObject: 0
 --- !u!1 &1482927773
 GameObject:
   m_ObjectHideFlags: 0
@@ -23905,6 +24037,7 @@ GameObject:
   - 224: {fileID: 2012495741}
   - 222: {fileID: 2012495743}
   - 114: {fileID: 2012495742}
+  - 114: {fileID: 2012495744}
   m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
@@ -23963,6 +24096,47 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2012495740}
+--- !u!114 &2012495744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2012495740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 2012495742}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &2023640720
 GameObject:
   m_ObjectHideFlags: 0

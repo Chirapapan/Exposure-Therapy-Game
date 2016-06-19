@@ -13,6 +13,7 @@ public class Continent : MonoBehaviour
 
     public City[] baseCities;
     public City[] otherCities;
+    public Sprite[] objectStates;
     
     private int lastPlanet;
     private int lastContinent;
@@ -28,14 +29,22 @@ public class Continent : MonoBehaviour
     private PanelManager panelMangerScript;
     public ObjectScript objectScript;
     public Sprite objective;
+    public Sprite doneObject;
     public string objectiveName;
 
     private Vector2 startSize;
+    private string collect = "Collect";
+    private string destroy = "Click the object to destroy";
     private Vector2 newStartSize;
     private Vector2 size;
    private Animator zoomInPanelAnimator;
     public string animatorName;
     public bool cityClick;
+    public int numberSprite = 5;
+    public string saveNumberSprite;
+    public bool destroyedObject;
+
+
 
     // Use this for initialization
     void Start()
@@ -53,7 +62,7 @@ public class Continent : MonoBehaviour
         lastPlanet = PlayerPrefs.GetInt("LastPlanet");
 
         amountOfExercises = PlayerPrefs.GetInt("Amount" + planetNum + "-" + continentNum);
-
+        
         CheckLock();
     }
 
@@ -99,6 +108,8 @@ public class Continent : MonoBehaviour
         if(lastContinent > continentNum)
         {
             ps.Play();
+            objectScript.ChangeImage(doneObject, destroy, objectiveName);
+            objectScript.clickToDestroy.onClick.AddListener(() => OnClickSprite(1));
         }
     }
 
@@ -148,14 +159,47 @@ public class Continent : MonoBehaviour
         planetScript.TurnOnSea();
         InitBaseCities();
         ShowOtherCities();
+        objectScript.ChangeImage(objective, collect,objectiveName);
         CheckLockAllCities();
+        CheckLock();
         panelMangerScript.Option(levelPanel);
         //StartCoroutine(ScaleUpPanel());
         zoomInPanelAnimator.Play("ContinentPanel5_ZoomIn");
-        objectScript.ChangeImage(objective, objectiveName);
-       
+        if(destroyedObject == true)
+        {
+            objectScript.ChangeImage(objectStates[4], "You destroyed", objectiveName);
+        }
     }
 
+
+    void OnClickSprite(int low)
+    {
+        numberSprite = numberSprite -low;
+        Debug.Log("hp" + numberSprite);
+        if(numberSprite == 4)
+        {
+            objectScript.ChangeImage(objectStates[1], destroy, objectiveName);
+        }
+        else if(numberSprite ==3)
+        {
+            objectScript.ChangeImage(objectStates[2], destroy, objectiveName);
+        }
+        else if(numberSprite == 2)
+        {
+            objectScript.ChangeImage(objectStates[3], destroy, objectiveName);
+        }
+        else if (numberSprite == 1)
+        {
+            objectScript.ChangeImage(objectStates[4], "You destroyed", objectiveName);
+            //objectScript.done.SetActive(true);
+            destroyedObject = true;
+        }
+
+        if(numberSprite < 1)
+        {
+            numberSprite = 1;
+        }
+    }
     public void CheckLockAllCities()
     {
         for(int i = 0; i < baseCities.Length; i ++)
